@@ -80,19 +80,11 @@
 		C333F8BB2759DE22009C61C3 /* Kane-Login */ = {
 			isa = PBXGroup;
 			children = (
+				C333F8CA2759DE24009C61C3 /* Info.plist */,
 				C3E2BBD22759F319005FCBF9 /* Resources */,
 				C3E2BBD32759F333005FCBF9 /* Sources */,
-				C345C031275A0FED00F3BCC5 /* Supporting Files */,
 			);
 			path = "Kane-Login";
-			sourceTree = "<group>";
-		};
-		C345C031275A0FED00F3BCC5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C333F8CA2759DE24009C61C3 /* Info.plist */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C3E2BBD22759F319005FCBF9 /* Resources */ = {
@@ -106,10 +98,10 @@
 		C3E2BBD32759F333005FCBF9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C3E2BBD52759F3C7005FCBF9 /* View */,
 				C3E2BBD42759F37E005FCBF9 /* Storyboard */,
 				C333F8BC2759DE22009C61C3 /* AppDelegate.swift */,
 				C333F8BE2759DE22009C61C3 /* SceneDelegate.swift */,
-				C3E2BBD52759F3C7005FCBF9 /* View */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
