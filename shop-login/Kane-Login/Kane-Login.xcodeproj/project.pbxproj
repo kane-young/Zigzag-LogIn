@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		447F8D9D855FA3B1505DF933 /* Pods_Kane_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541E38D005180CEB973CD2A7 /* Pods_Kane_Login.framework */; };
+		C31611EF275D0482002D8126 /* LogInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31611EE275D0482002D8126 /* LogInTextField.swift */; };
 		C333F8BD2759DE22009C61C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333F8BC2759DE22009C61C3 /* AppDelegate.swift */; };
 		C333F8BF2759DE22009C61C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333F8BE2759DE22009C61C3 /* SceneDelegate.swift */; };
 		C333F8C12759DE22009C61C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333F8C02759DE22009C61C3 /* MainViewController.swift */; };
 		C333F8C42759DE22009C61C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C333F8C22759DE22009C61C3 /* Main.storyboard */; };
 		C333F8C62759DE24009C61C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C333F8C52759DE24009C61C3 /* Assets.xcassets */; };
 		C333F8C92759DE24009C61C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C333F8C72759DE24009C61C3 /* LaunchScreen.storyboard */; };
+		C345C05F275A495400F3BCC5 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C345C05E275A495400F3BCC5 /* LogIn.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03BBD9FF9285EF204355FAF7 /* Pods-Kane-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kane-Login.debug.xcconfig"; path = "Target Support Files/Pods-Kane-Login/Pods-Kane-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		541E38D005180CEB973CD2A7 /* Pods_Kane_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kane_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31611EE275D0482002D8126 /* LogInTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInTextField.swift; sourceTree = "<group>"; };
 		C333F8B92759DE22009C61C3 /* Kane-Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kane-Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C333F8BC2759DE22009C61C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C333F8BE2759DE22009C61C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		C333F8C52759DE24009C61C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C333F8C82759DE24009C61C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C333F8CA2759DE24009C61C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C345C05E275A495400F3BCC5 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		FCC949ED167297087971E697 /* Pods-Kane-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kane-Login.release.xcconfig"; path = "Target Support Files/Pods-Kane-Login/Pods-Kane-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,7 @@
 			children = (
 				C333F8C22759DE22009C61C3 /* Main.storyboard */,
 				C333F8C72759DE24009C61C3 /* LaunchScreen.storyboard */,
+				C345C05E275A495400F3BCC5 /* LogIn.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				C333F8C02759DE22009C61C3 /* MainViewController.swift */,
+				C31611EE275D0482002D8126 /* LogInTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C345C05F275A495400F3BCC5 /* LogIn.storyboard in Resources */,
 				C333F8C92759DE24009C61C3 /* LaunchScreen.storyboard in Resources */,
 				C333F8C62759DE24009C61C3 /* Assets.xcassets in Resources */,
 				C333F8C42759DE22009C61C3 /* Main.storyboard in Resources */,
@@ -239,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C333F8C12759DE22009C61C3 /* MainViewController.swift in Sources */,
+				C31611EF275D0482002D8126 /* LogInTextField.swift in Sources */,
 				C333F8BD2759DE22009C61C3 /* AppDelegate.swift in Sources */,
 				C333F8BF2759DE22009C61C3 /* SceneDelegate.swift in Sources */,
 			);
