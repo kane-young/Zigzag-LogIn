@@ -32,7 +32,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6xo-hU-zt1">
-                        <barButtonItem key="rightBarButtonItem" title="로그인" id="Agy-En-VqS"/>
+                        <barButtonItem key="rightBarButtonItem" title="로그인" id="Agy-En-VqS">
+                            <connections>
+                                <action selector="touchRightBarButtonItem:" destination="BYZ-38-t0r" id="3qK-pJ-p2E"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
