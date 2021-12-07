@@ -17,6 +17,8 @@
 		C333F8C92759DE24009C61C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C333F8C72759DE24009C61C3 /* LaunchScreen.storyboard */; };
 		C345C05F275A495400F3BCC5 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C345C05E275A495400F3BCC5 /* LogIn.storyboard */; };
 		C3DA4444275E38EF006EF32A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4443275E38EF006EF32A /* LogInViewController.swift */; };
+		C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E808275F67630032D927 /* LogInViewModel.swift */; };
+		C3F8E80B275F727B0032D927 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80A275F727B0032D927 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		C333F8CA2759DE24009C61C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C345C05E275A495400F3BCC5 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		C3DA4443275E38EF006EF32A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		C3F8E808275F67630032D927 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		C3F8E80A275F727B0032D927 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		FCC949ED167297087971E697 /* Pods-Kane-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kane-Login.release.xcconfig"; path = "Target Support Files/Pods-Kane-Login/Pods-Kane-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,8 @@
 		C3E2BBD32759F333005FCBF9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C3F8E80D275F8AD20032D927 /* ViewModel */,
+				C3F8E80C275F8ACB0032D927 /* Model */,
 				C3E2BBD52759F3C7005FCBF9 /* View */,
 				C3E2BBD42759F37E005FCBF9 /* Storyboard */,
 				C333F8BC2759DE22009C61C3 /* AppDelegate.swift */,
@@ -130,6 +136,22 @@
 				C31611EE275D0482002D8126 /* LogInTextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C3F8E80C275F8ACB0032D927 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8E80A275F727B0032D927 /* Observable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3F8E80D275F8AD20032D927 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8E808275F67630032D927 /* LogInViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +273,9 @@
 				C333F8C12759DE22009C61C3 /* MainViewController.swift in Sources */,
 				C31611EF275D0482002D8126 /* LogInTextField.swift in Sources */,
 				C333F8BD2759DE22009C61C3 /* AppDelegate.swift in Sources */,
+				C3F8E80B275F727B0032D927 /* Observable.swift in Sources */,
 				C3DA4444275E38EF006EF32A /* LogInViewController.swift in Sources */,
+				C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */,
 				C333F8BF2759DE22009C61C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
