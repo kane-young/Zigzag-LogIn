@@ -8,6 +8,6 @@
 import Foundation
 
 protocol Validatable {
-    func validate(_ text: String?, type: ValidationType) -> Bool
+    func validate(_ text: String?, type: ValidationType) -> TextState
     func validatedAll() -> Bool
 }

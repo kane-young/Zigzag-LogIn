@@ -11,8 +11,10 @@ final class LogInValidator: Validatable {
     private var isIdentityValidation: Bool = false
     private var isPasswordValidation: Bool = false
 
-    func validate(_ text: String?, type: ValidationType) -> Bool {
-        guard let text = text else { return false }
+    func validate(_ text: String?, type: ValidationType) -> TextState {
+        guard let text = text, text.isEmpty == false else {
+            return .empty
+        }
         switch type {
         case .identity:
             return validateIdentity(text)
@@ -25,14 +27,14 @@ final class LogInValidator: Validatable {
         return isIdentityValidation && isPasswordValidation
     }
 
-    private func validateIdentity(_ identity: String) -> Bool {
+    private func validateIdentity(_ identity: String) -> TextState {
         isIdentityValidation = validateLength(identity) && validateWhiteSpace(identity)
-        return isIdentityValidation
+        return isIdentityValidation ? .valid : .invalid
     }
 
-    private func validatePassword(_ password: String) -> Bool {
+    private func validatePassword(_ password: String) -> TextState {
         isPasswordValidation = validateLength(password) && validateWhiteSpace(password)
-        return isPasswordValidation
+        return isPasswordValidation ? .valid : .invalid
     }
 
     private func validateLength(_ text: String) -> Bool {
