@@ -16,6 +16,6 @@ class MainViewController: UIViewController {
     @IBAction func touchRightBarButtonItem(_ sender: UIBarButtonItem) {
         let logInStoryboard = UIStoryboard(name: "LogIn", bundle: nil)
         let logInViewController = logInStoryboard.instantiateViewController(withIdentifier: LogInViewController.identifier)
-        self.navigationController?.pushViewController(logInViewController, animated: false)
+        self.navigationController?.pushViewController(logInViewController, animated: true)
     }
 }

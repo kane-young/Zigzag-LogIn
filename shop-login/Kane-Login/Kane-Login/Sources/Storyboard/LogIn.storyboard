@@ -84,14 +84,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-OR-tvV">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-OR-tvV">
                                                 <rect key="frame" x="320" y="550.33333333333337" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="b7M-gG-tiZ"/>
                                                     <constraint firstAttribute="height" constant="35" id="qDG-4P-XCH"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="V"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="">
+                                                    <backgroundConfiguration key="background" image="unchecked_normal" imageContentMode="scaleAspectFit"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="touchAutoLogInButtonWithSender:" destination="agk-af-7f8" eventType="touchUpInside" id="cqh-rG-YvL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-6V-juY">
                                                 <rect key="frame" x="20" y="598.33333333333337" width="335" height="50"/>
@@ -190,6 +196,7 @@
                     </view>
                     <connections>
                         <outlet property="autoLogInAgreeLabel" destination="kB5-0c-WfH" id="hmz-Tm-5ts"/>
+                        <outlet property="autoLogInCheckButton" destination="Vax-OR-tvV" id="8jT-am-jet"/>
                         <outlet property="subTitleLabel" destination="BTC-F6-efn" id="nTs-kf-DsZ"/>
                         <outlet property="titleLabel" destination="TKN-qo-tmc" id="mJD-Cv-viA"/>
                     </connections>
@@ -211,6 +218,7 @@
         <image name="checked_normal" width="60" height="60"/>
         <image name="login" width="352" height="227"/>
         <image name="password_icon" width="30" height="30"/>
+        <image name="unchecked_normal" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
