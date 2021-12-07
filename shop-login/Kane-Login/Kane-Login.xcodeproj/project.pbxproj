@@ -19,6 +19,9 @@
 		C3DA4444275E38EF006EF32A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4443275E38EF006EF32A /* LogInViewController.swift */; };
 		C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E808275F67630032D927 /* LogInViewModel.swift */; };
 		C3F8E80B275F727B0032D927 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80A275F727B0032D927 /* Observable.swift */; };
+		C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80E275F8D470032D927 /* ValidationType.swift */; };
+		C3F8E811275F8D6E0032D927 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E810275F8D6E0032D927 /* Validatable.swift */; };
+		C3F8E813275F8D990032D927 /* LogInValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E812275F8D990032D927 /* LogInValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		C3DA4443275E38EF006EF32A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C3F8E808275F67630032D927 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		C3F8E80A275F727B0032D927 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		C3F8E80E275F8D470032D927 /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
+		C3F8E810275F8D6E0032D927 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		C3F8E812275F8D990032D927 /* LogInValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInValidator.swift; sourceTree = "<group>"; };
 		FCC949ED167297087971E697 /* Pods-Kane-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kane-Login.release.xcconfig"; path = "Target Support Files/Pods-Kane-Login/Pods-Kane-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				C3F8E80A275F727B0032D927 /* Observable.swift */,
+				C3F8E810275F8D6E0032D927 /* Validatable.swift */,
+				C3F8E80E275F8D470032D927 /* ValidationType.swift */,
+				C3F8E812275F8D990032D927 /* LogInValidator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,9 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C333F8C12759DE22009C61C3 /* MainViewController.swift in Sources */,
+				C3F8E811275F8D6E0032D927 /* Validatable.swift in Sources */,
+				C3F8E813275F8D990032D927 /* LogInValidator.swift in Sources */,
 				C31611EF275D0482002D8126 /* LogInTextField.swift in Sources */,
 				C333F8BD2759DE22009C61C3 /* AppDelegate.swift in Sources */,
 				C3F8E80B275F727B0032D927 /* Observable.swift in Sources */,
+				C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */,
 				C3DA4444275E38EF006EF32A /* LogInViewController.swift in Sources */,
 				C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */,
 				C333F8BF2759DE22009C61C3 /* SceneDelegate.swift in Sources */,
