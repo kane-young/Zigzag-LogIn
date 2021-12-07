@@ -14,13 +14,21 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var autoLogInAgreeLabel: UILabel!
     @IBOutlet weak var autoLogInCheckButton: UIButton!
+    @IBOutlet weak var identityTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var findingButton: UIButton!
 
-    private var ispressed: Bool = false
+    private var ispressed = false
+    private var viewModel = LogInViewModel(validator: LogInValidator())
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModelBind()
         configureLabels()
         configureNavigationBar()
+        configureTextFieldAppearance(identityTextField)
+        configureTextFieldAppearance(passwordTextField)
     }
 
     private func configureNavigationBar() {
@@ -38,7 +46,7 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func touchAutoLogInButton(sender: UIButton) {
-        autoLogInCheckButton.configurationUpdateHandler = { button in
+        sender.configurationUpdateHandler = { button in
             var image = button.configuration?.background.image
             if button.state == .normal {
                 if self.ispressed {
@@ -57,5 +65,68 @@ class LogInViewController: UIViewController {
             }
             button.configuration?.background.image = image
         }
+    }
+
+    private func viewModelBind() {
+        viewModel.identity.bind { [weak self] textState in
+            let color = self?.textFieldColor(with: textState)
+            self?.identityTextField.layer.borderColor = color
+        }
+        viewModel.password.bind { [weak self] textState in
+            let color = self?.textFieldColor(with: textState)
+            self?.passwordTextField.layer.borderColor = color
+        }
+        viewModel.validatedAll.bind { [weak self] validated in
+            self?.logInButton.isEnabled = validated
+        }
+    }
+
+    private func configureTextFieldAppearance(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.systemBackground.cgColor
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 15
+    }
+
+    private func textFieldColor(with textState: TextState) -> CGColor {
+        switch textState {
+        case .empty:
+            return UIColor.systemBackground.cgColor
+        case .valid:
+            return UIColor.systemGreen.cgColor
+        case .invalid:
+            return UIColor.systemRed.cgColor
+        }
+    }
+
+    @IBAction func touchLogInButton(sender: UIButton) {
+        sender.setTitle(nil, for: .normal)
+        setViewsDisabled()
+        sender.setTitle(nil, for: .normal)
+        titleLabel.text = "로그인 중입니다..."
+        subTitleLabel.isHidden = true
+        sender.configuration?.showsActivityIndicator = true
+        DispatchQueue.global().async {
+            sleep(5)
+            DispatchQueue.main.async {
+                sender.configuration?.showsActivityIndicator = false
+            }
+        }
+    }
+
+    @IBAction func editIdentityTextField(_ sender: LogInTextField) {
+        viewModel.textChanged(sender.text, type: .identity)
+    }
+
+    @IBAction func editPasswordTextField(_ sender: LogInTextField) {
+        viewModel.textChanged(sender.text, type: .password)
+    }
+
+    private func setViewsDisabled() {
+        logInButton.isEnabled = false
+        findingButton.isEnabled = false
+        identityTextField.isEnabled = false
+        passwordTextField.isEnabled = false
+        autoLogInAgreeLabel.isEnabled = false
+        autoLogInCheckButton.isEnabled = false
     }
 }

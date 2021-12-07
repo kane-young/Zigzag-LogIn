@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,29 +13,29 @@
             <objects>
                 <viewController storyboardIdentifier="LogInViewController" id="agk-af-7f8" customClass="LogInViewController" customModule="Kane_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJZ-15-TdX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDG-Yu-Fgc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kii-3l-Cz0">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="737"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKa-pc-T13">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="429"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-Ac-fQo">
-                                                        <rect key="frame" x="20" y="91" width="374" height="276"/>
+                                                        <rect key="frame" x="20" y="82.333333333333343" width="350" height="264.33333333333326"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="BNB-0k-2nr">
-                                                                <rect key="frame" x="50.5" y="0.0" width="273" height="177"/>
+                                                                <rect key="frame" x="47" y="0.0" width="256" height="165.66666666666666"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="BNB-0k-2nr" secondAttribute="height" multiplier="170:110" id="0Hv-Pe-ajG"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKN-qo-tmc">
-                                                                <rect key="frame" x="0.0" y="197" width="374" height="42.5"/>
+                                                                <rect key="frame" x="0.0" y="185.66666666666669" width="350" height="42.333333333333343"/>
                                                                 <string key="text">주문하신 상품의 계정으로 로그인하시면
 배송 정보를 실시간으로 볼 수 있어요.</string>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -43,7 +43,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃피는시절 비회원 주문 및 SNS 계정(페이스북/네이버 등)으로 로그인하여 주문하신 경우, '주문 페이지 바로가기'를 이용해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTC-F6-efn">
-                                                                <rect key="frame" x="0.0" y="249.5" width="374" height="26.5"/>
+                                                                <rect key="frame" x="0.0" y="238" width="350" height="26.333333333333314"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동 로그인 약관에 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB5-0c-WfH">
-                                                <rect key="frame" x="20" y="605" width="161" height="21"/>
+                                                <rect key="frame" x="20" y="556" width="161" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="161" id="q6h-db-pEc"/>
                                                     <constraint firstAttribute="height" constant="21" id="vYy-9D-mE7"/>
@@ -85,7 +85,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-OR-tvV">
-                                                <rect key="frame" x="359" y="598" width="35" height="35"/>
+                                                <rect key="frame" x="335" y="549" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="b7M-gG-tiZ"/>
                                                     <constraint firstAttribute="height" constant="35" id="qDG-4P-XCH"/>
@@ -100,7 +100,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-6V-juY">
-                                                <rect key="frame" x="20" y="646" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="597" width="350" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="qMp-1Z-50a"/>
@@ -108,9 +108,12 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                                <connections>
+                                                    <action selector="touchLogInButtonWithSender:" destination="agk-af-7f8" eventType="touchUpInside" id="FR1-6w-Y0c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxk-ax-1aa">
-                                                <rect key="frame" x="20" y="716" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="667" width="350" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="RKl-EV-6Ot"/>
                                                 </constraints>
@@ -119,21 +122,24 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="아이디&amp;비밀번호 찾기"/>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-it-hw3" customClass="LogInTextField" customModule="Kane_Login" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="538" width="374" height="40"/>
+                                                <rect key="frame" x="20" y="489" width="350" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VRg-qw-MSl"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password_icon"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
                                                         <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="editPasswordTextField:" destination="agk-af-7f8" eventType="editingChanged" id="MUX-aD-cwK"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="꽃피는시절 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFQ-y6-xZS" customClass="LogInTextField" customModule="Kane_Login" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="478" width="374" height="40"/>
+                                                <rect key="frame" x="20" y="429" width="350" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="eqz-Wl-sPD">
                                                         <variation key="heightClass=compact-widthClass=regular" constant="40"/>
@@ -143,11 +149,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="checked_normal"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="imvely"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
                                                         <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="editIdentityTextField:" destination="agk-af-7f8" eventType="editingChanged" id="GFk-O3-vai"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -171,7 +180,7 @@
                                             <constraint firstItem="kB5-0c-WfH" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="r6E-dA-YKV"/>
                                             <constraint firstItem="KFQ-y6-xZS" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="s52-SU-plQ"/>
                                             <constraint firstItem="LnE-it-hw3" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="tiw-3y-0nR"/>
-                                            <constraint firstItem="KFQ-y6-xZS" firstAttribute="top" secondItem="GKa-pc-T13" secondAttribute="bottom" constant="20" id="zgJ-ai-fcp"/>
+                                            <constraint firstItem="KFQ-y6-xZS" firstAttribute="top" secondItem="GKa-pc-T13" secondAttribute="bottom" id="zgJ-ai-fcp"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -200,6 +209,10 @@
                     <connections>
                         <outlet property="autoLogInAgreeLabel" destination="kB5-0c-WfH" id="hmz-Tm-5ts"/>
                         <outlet property="autoLogInCheckButton" destination="Vax-OR-tvV" id="8jT-am-jet"/>
+                        <outlet property="findingButton" destination="Bxk-ax-1aa" id="DDE-bt-5Cm"/>
+                        <outlet property="identityTextField" destination="KFQ-y6-xZS" id="cXL-3b-n1M"/>
+                        <outlet property="logInButton" destination="kAN-6V-juY" id="01S-W3-Ch8"/>
+                        <outlet property="passwordTextField" destination="LnE-it-hw3" id="Bjz-sf-T6A"/>
                         <outlet property="subTitleLabel" destination="BTC-F6-efn" id="nTs-kf-DsZ"/>
                         <outlet property="titleLabel" destination="TKN-qo-tmc" id="mJD-Cv-viA"/>
                     </connections>
@@ -211,14 +224,14 @@
     </scenes>
     <designables>
         <designable name="KFQ-y6-xZS">
-            <size key="intrinsicContentSize" width="137" height="18.5"/>
+            <size key="intrinsicContentSize" width="136" height="18.666666666666668"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="84.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="83.666666666666671" height="18.666666666666668"/>
         </designable>
     </designables>
     <resources>
-        <image name="checked_normal" width="60" height="60"/>
+        <image name="imvely" width="236" height="236"/>
         <image name="login" width="352" height="227"/>
         <image name="password_icon" width="30" height="30"/>
         <image name="unchecked_normal" width="60" height="60"/>
