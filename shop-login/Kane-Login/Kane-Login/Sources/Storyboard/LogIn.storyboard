@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,29 +13,29 @@
             <objects>
                 <viewController storyboardIdentifier="LogInViewController" id="agk-af-7f8" customClass="LogInViewController" customModule="Kane_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJZ-15-TdX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDG-Yu-Fgc">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kii-3l-Cz0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="738.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKa-pc-T13">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="440.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-Ac-fQo">
-                                                        <rect key="frame" x="20" y="86" width="335" height="268.66666666666669"/>
+                                                        <rect key="frame" x="20" y="91" width="374" height="276"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="BNB-0k-2nr">
-                                                                <rect key="frame" x="36" y="0.0" width="263" height="170"/>
+                                                                <rect key="frame" x="50.5" y="0.0" width="273" height="177"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="BNB-0k-2nr" secondAttribute="height" multiplier="170:110" id="0Hv-Pe-ajG"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKN-qo-tmc">
-                                                                <rect key="frame" x="0.0" y="190" width="335" height="42.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="197" width="374" height="42.5"/>
                                                                 <string key="text">주문하신 상품의 계정으로 로그인하시면
 배송 정보를 실시간으로 볼 수 있어요.</string>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -43,7 +43,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃피는시절 비회원 주문 및 SNS 계정(페이스북/네이버 등)으로 로그인하여 주문하신 경우, '주문 페이지 바로가기'를 이용해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTC-F6-efn">
-                                                                <rect key="frame" x="0.0" y="242.33333333333331" width="335" height="26.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="249.5" width="374" height="26.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동 로그인 약관에 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB5-0c-WfH">
-                                                <rect key="frame" x="20" y="557.33333333333337" width="161" height="21"/>
+                                                <rect key="frame" x="20" y="605" width="161" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="161" id="q6h-db-pEc"/>
                                                     <constraint firstAttribute="height" constant="21" id="vYy-9D-mE7"/>
@@ -85,7 +85,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-OR-tvV">
-                                                <rect key="frame" x="320" y="550.33333333333337" width="35" height="35"/>
+                                                <rect key="frame" x="359" y="598" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="b7M-gG-tiZ"/>
                                                     <constraint firstAttribute="height" constant="35" id="qDG-4P-XCH"/>
@@ -100,7 +100,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-6V-juY">
-                                                <rect key="frame" x="20" y="598.33333333333337" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="646" width="374" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="qMp-1Z-50a"/>
@@ -110,7 +110,7 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxk-ax-1aa">
-                                                <rect key="frame" x="20" y="668.33333333333337" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="716" width="374" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="RKl-EV-6Ot"/>
                                                 </constraints>
@@ -119,7 +119,7 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="아이디&amp;비밀번호 찾기"/>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-it-hw3" customClass="LogInTextField" customModule="Kane_Login" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="500.33333333333337" width="335" height="40"/>
+                                                <rect key="frame" x="20" y="538" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VRg-qw-MSl"/>
                                                 </constraints>
@@ -133,9 +133,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="꽃피는시절 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFQ-y6-xZS" customClass="LogInTextField" customModule="Kane_Login" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="450.33333333333331" width="335" height="40"/>
+                                                <rect key="frame" x="20" y="478" width="374" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="eqz-Wl-sPD"/>
+                                                    <constraint firstAttribute="height" constant="40" id="eqz-Wl-sPD">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -153,7 +156,7 @@
                                             <constraint firstItem="Bxk-ax-1aa" firstAttribute="top" secondItem="kAN-6V-juY" secondAttribute="bottom" constant="20" id="D1G-nB-FY3"/>
                                             <constraint firstAttribute="trailing" secondItem="GKa-pc-T13" secondAttribute="trailing" id="DnL-yn-C1U"/>
                                             <constraint firstAttribute="trailing" secondItem="LnE-it-hw3" secondAttribute="trailing" constant="20" id="Esw-pI-5Dm"/>
-                                            <constraint firstItem="Vax-OR-tvV" firstAttribute="top" secondItem="LnE-it-hw3" secondAttribute="bottom" constant="10" id="JVU-KK-sRK"/>
+                                            <constraint firstItem="Vax-OR-tvV" firstAttribute="top" secondItem="LnE-it-hw3" secondAttribute="bottom" constant="20" id="JVU-KK-sRK"/>
                                             <constraint firstItem="GKa-pc-T13" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" id="Mek-XU-UaR"/>
                                             <constraint firstItem="kAN-6V-juY" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="Nj1-Qn-wtr"/>
                                             <constraint firstItem="GKa-pc-T13" firstAttribute="top" secondItem="Kii-3l-Cz0" secondAttribute="top" id="O2D-5k-Zcl"/>
@@ -161,20 +164,20 @@
                                             <constraint firstItem="kAN-6V-juY" firstAttribute="top" secondItem="kB5-0c-WfH" secondAttribute="bottom" constant="20" id="Rxg-Fe-7Yw"/>
                                             <constraint firstAttribute="bottom" secondItem="Bxk-ax-1aa" secondAttribute="bottom" constant="20" id="S3D-hn-l78"/>
                                             <constraint firstAttribute="trailing" secondItem="Vax-OR-tvV" secondAttribute="trailing" constant="20" id="aao-XW-uf2"/>
-                                            <constraint firstItem="LnE-it-hw3" firstAttribute="top" secondItem="KFQ-y6-xZS" secondAttribute="bottom" constant="10" id="b2k-88-wAE"/>
+                                            <constraint firstItem="LnE-it-hw3" firstAttribute="top" secondItem="KFQ-y6-xZS" secondAttribute="bottom" constant="20" id="b2k-88-wAE"/>
                                             <constraint firstItem="Bxk-ax-1aa" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="djd-ie-mM0"/>
                                             <constraint firstAttribute="trailing" secondItem="kAN-6V-juY" secondAttribute="trailing" constant="20" id="jfn-YM-VGU"/>
                                             <constraint firstAttribute="trailing" secondItem="KFQ-y6-xZS" secondAttribute="trailing" constant="20" id="onV-ji-ceA"/>
                                             <constraint firstItem="kB5-0c-WfH" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="r6E-dA-YKV"/>
                                             <constraint firstItem="KFQ-y6-xZS" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="s52-SU-plQ"/>
                                             <constraint firstItem="LnE-it-hw3" firstAttribute="leading" secondItem="Kii-3l-Cz0" secondAttribute="leading" constant="20" id="tiw-3y-0nR"/>
-                                            <constraint firstItem="KFQ-y6-xZS" firstAttribute="top" secondItem="GKa-pc-T13" secondAttribute="bottom" constant="10" id="zgJ-ai-fcp"/>
+                                            <constraint firstItem="KFQ-y6-xZS" firstAttribute="top" secondItem="GKa-pc-T13" secondAttribute="bottom" constant="20" id="zgJ-ai-fcp"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="trailing" secondItem="ELS-T5-vBd" secondAttribute="trailing" id="0Ol-JP-NCX"/>
-                                    <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="lessThanOrEqual" secondItem="l3L-gj-1pD" secondAttribute="height" multiplier="0.6" id="Kh7-0M-HIz"/>
+                                    <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="lessThanOrEqual" secondItem="l3L-gj-1pD" secondAttribute="height" multiplier="0.56" id="Kh7-0M-HIz"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="height" secondItem="l3L-gj-1pD" secondAttribute="height" priority="750" id="cd0-76-ZYS"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="leading" secondItem="ELS-T5-vBd" secondAttribute="leading" id="iZV-Lf-Gfp"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="bottom" secondItem="ELS-T5-vBd" secondAttribute="bottom" id="oJo-6U-ygW"/>
@@ -208,10 +211,10 @@
     </scenes>
     <designables>
         <designable name="KFQ-y6-xZS">
-            <size key="intrinsicContentSize" width="134" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="137" height="18.5"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="81.666666666666671" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="84.5" height="18.5"/>
         </designable>
     </designables>
     <resources>
