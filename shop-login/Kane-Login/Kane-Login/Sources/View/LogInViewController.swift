@@ -20,6 +20,11 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLabels()
+        configureNavigationBar()
+    }
+
+    private func configureNavigationBar() {
+        self.navigationItem.title = "로그인(꽃피는시절)"
     }
 
     private func configureLabels() {
