@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,29 +13,29 @@
             <objects>
                 <viewController storyboardIdentifier="LogInViewController" id="agk-af-7f8" customClass="LogInViewController" customModule="Kane_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJZ-15-TdX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDG-Yu-Fgc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kii-3l-Cz0">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="639"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="738.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKa-pc-T13">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="341"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="440.33333333333331"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-Ac-fQo">
-                                                        <rect key="frame" x="20" y="47" width="280" height="247"/>
+                                                        <rect key="frame" x="20" y="86" width="335" height="268.66666666666669"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="BNB-0k-2nr">
-                                                                <rect key="frame" x="38.5" y="0.0" width="203" height="131.5"/>
+                                                                <rect key="frame" x="36" y="0.0" width="263" height="170"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="BNB-0k-2nr" secondAttribute="height" multiplier="170:110" id="0Hv-Pe-ajG"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKN-qo-tmc">
-                                                                <rect key="frame" x="0.0" y="151.5" width="280" height="46"/>
+                                                                <rect key="frame" x="0.0" y="190" width="335" height="42.333333333333343"/>
                                                                 <string key="text">주문하신 상품의 계정으로 로그인하시면
 배송 정보를 실시간으로 볼 수 있어요.</string>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -43,7 +43,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃피는시절 비회원 주문 및 SNS 계정(페이스북/네이버 등)으로 로그인하여 주문하신 경우, '주문 페이지 바로가기'를 이용해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTC-F6-efn">
-                                                                <rect key="frame" x="0.0" y="207.5" width="280" height="39.5"/>
+                                                                <rect key="frame" x="0.0" y="242.33333333333331" width="335" height="26.333333333333314"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동 로그인 약관에 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB5-0c-WfH">
-                                                <rect key="frame" x="20" y="458" width="161" height="21"/>
+                                                <rect key="frame" x="20" y="557.33333333333337" width="161" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="161" id="q6h-db-pEc"/>
                                                     <constraint firstAttribute="height" constant="21" id="vYy-9D-mE7"/>
@@ -85,7 +85,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-OR-tvV">
-                                                <rect key="frame" x="265" y="451" width="35" height="35"/>
+                                                <rect key="frame" x="320" y="550.33333333333337" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="b7M-gG-tiZ"/>
                                                     <constraint firstAttribute="height" constant="35" id="qDG-4P-XCH"/>
@@ -94,23 +94,26 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="V"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-6V-juY">
-                                                <rect key="frame" x="20" y="499" width="280" height="50"/>
+                                                <rect key="frame" x="20" y="598.33333333333337" width="335" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="qMp-1Z-50a"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxk-ax-1aa">
-                                                <rect key="frame" x="20" y="569" width="280" height="50"/>
+                                                <rect key="frame" x="20" y="668.33333333333337" width="335" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="RKl-EV-6Ot"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="아이디&amp;비밀번호 찾기"/>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-it-hw3" customClass="LogInTextField" customModule="Kane_Login" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="401" width="280" height="40"/>
+                                                <rect key="frame" x="20" y="500.33333333333337" width="335" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VRg-qw-MSl"/>
                                                 </constraints>
@@ -124,7 +127,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="꽃피는시절 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFQ-y6-xZS" customClass="LogInTextField" customModule="Kane_Login" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="351" width="280" height="40"/>
+                                                <rect key="frame" x="20" y="450.33333333333331" width="335" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="eqz-Wl-sPD"/>
                                                 </constraints>
@@ -185,6 +188,11 @@
                             <constraint firstItem="G2l-8d-mOK" firstAttribute="trailing" secondItem="CDG-Yu-Fgc" secondAttribute="trailing" id="Ico-I8-iQg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="autoLogInAgreeLabel" destination="kB5-0c-WfH" id="hmz-Tm-5ts"/>
+                        <outlet property="subTitleLabel" destination="BTC-F6-efn" id="nTs-kf-DsZ"/>
+                        <outlet property="titleLabel" destination="TKN-qo-tmc" id="mJD-Cv-viA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmM-AF-Sz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,10 +201,10 @@
     </scenes>
     <designables>
         <designable name="KFQ-y6-xZS">
-            <size key="intrinsicContentSize" width="131" height="18.5"/>
+            <size key="intrinsicContentSize" width="134" height="18.666666666666668"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="78.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="81.666666666666671" height="18.666666666666668"/>
         </designable>
     </designables>
     <resources>
@@ -208,6 +216,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
