@@ -113,18 +113,20 @@ class LogInViewController: UIViewController {
     @IBAction func touchLogInButton(sender: UIButton) {
         if ispressed {
             UserDefaults.standard.set(true, forKey: "AutoLogIn")
-        }
-        subInformationLabel.isHidden = true
-        informationLabel.text = "로그인 중입니다..."
-        setViewsOpacity()
-        setViewsDisabled()
-        sender.setTitle("", for: .normal)
-        sender.configuration?.showsActivityIndicator = true
-        DispatchQueue.global().async {
-            sleep(5)
-            DispatchQueue.main.async {
-                self.informationLabel.text = "로그인 성공!"
+            subInformationLabel.isHidden = true
+            informationLabel.text = "로그인 중입니다..."
+            setViewsOpacity()
+            setViewsDisabled()
+            sender.setTitle("", for: .normal)
+            sender.configuration?.showsActivityIndicator = true
+            DispatchQueue.global().async {
+                sleep(5)
+                DispatchQueue.main.async {
+                    self.informationLabel.text = "로그인 성공!"
+                }
             }
+        } else {
+            alert()
         }
     }
 
@@ -134,6 +136,15 @@ class LogInViewController: UIViewController {
 
     @IBAction func editPasswordTextField(_ sender: UITextField) {
         viewModel.textChanged(sender.text, type: .password)
+    }
+
+    private func alert() {
+        let alert = UIAlertController(title: "자동 로그인 약관 동의",
+                                      message: "자동 로그인 약관에 동의하시고 로그인하셔야 합니다.",
+                                      preferredStyle: .alert)
+        let okay = UIAlertAction(title: "확인", style: .default)
+        alert.addAction(okay)
+        present(alert, animated: true)
     }
 
     private func setViewsDisabled() {
