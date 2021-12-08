@@ -12,7 +12,7 @@ final class LogInValidator: Validatable {
     private var isPasswordValidation: Bool = false
 
     func validate(_ text: String?, type: ValidationType) -> TextState {
-        guard let text = text, text.isEmpty == false else {
+        guard let text = text else {
             return .empty
         }
         switch type {
