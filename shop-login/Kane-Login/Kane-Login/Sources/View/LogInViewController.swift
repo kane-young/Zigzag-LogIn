@@ -23,6 +23,14 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var logInButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var findButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var passwordBottomConstraint: NSLayoutConstraint!
+    private lazy var autoLogInTermsButton: UIButton = {
+        let autoLogInTermsButton = UIButton()
+        autoLogInTermsButton.setTitle("자동 로그인 연결 약관", for: .normal)
+        autoLogInTermsButton.backgroundColor = .systemGray4
+        autoLogInTermsButton.setTitleColor(.darkGray, for: .normal)
+        autoLogInTermsButton.translatesAutoresizingMaskIntoConstraints = false
+        return autoLogInTermsButton
+    }()
 
     private var ispressed = false
     private var viewModel = LogInViewModel(validator: LogInValidator())
@@ -32,8 +40,8 @@ class LogInViewController: UIViewController {
         viewModelBind()
         configureLabels()
         configureNavigationBar()
-        configureTextFields()
         distinguishAutoLogIn()
+        configureTextFields()
     }
 
     private func configureNavigationBar() {
@@ -43,6 +51,13 @@ class LogInViewController: UIViewController {
     private func configureLabels() {
         configureInformationLabels()
         configureAutoLogInAgreeLabel()
+    }
+
+    private func configureTextFields() {
+        identityTextField.layer.borderWidth = 1
+        passwordTextField.layer.borderWidth = 1
+        identityTextField.layer.borderColor = UIColor.systemBackground.cgColor
+        passwordTextField.layer.borderColor = UIColor.systemBackground.cgColor
     }
 
     private func configureInformationLabels() {
@@ -59,26 +74,15 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func touchAutoLogInButton(sender: UIButton) {
-        sender.configurationUpdateHandler = { button in
-            var image = button.configuration?.background.image
-            image = self.autoLogInAgreeButtonImage()
-            button.configuration?.background.image = image
-        }
-    }
-
-    private func autoLogInAgreeButtonImage() -> UIImage? {
-        if autoLogInCheckButton.state == .normal && ispressed {
+        if ispressed {
             self.ispressed = false
-            return UIImage(named: "unchecked_normal")
-        } else if autoLogInCheckButton.state == .normal && !ispressed {
+            sender.setImage(UIImage(named: "unchecked_normal"), for: .normal)
+            sender.setImage(UIImage(named: "unchecked_pressed"), for: .highlighted)
+        } else {
             self.ispressed = true
-            return UIImage(named: "checked_normal")
-        } else if autoLogInCheckButton.state == .highlighted && ispressed {
-            return UIImage(named: "checked_pressed")
-        } else if autoLogInCheckButton.state == .highlighted && !ispressed {
-            return UIImage(named: "unchecked_pressed")
+            sender.setImage(UIImage(named: "checked_normal"), for: .normal)
+            sender.setImage(UIImage(named: "checked_pressed"), for: .highlighted)
         }
-        return nil
     }
 
     private func viewModelBind() {
@@ -93,17 +97,6 @@ class LogInViewController: UIViewController {
         viewModel.validatedAll.bind { [weak self] validated in
             self?.logInButton.isEnabled = validated
         }
-    }
-
-    private func configureTextFields() {
-        configureTextFieldAppearance(identityTextField)
-        configureTextFieldAppearance(passwordTextField)
-    }
-
-    private func configureTextFieldAppearance(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.systemBackground.cgColor
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 15
     }
 
     private func textFieldColor(with textState: TextState) -> CGColor {
@@ -123,6 +116,7 @@ class LogInViewController: UIViewController {
         }
         subInformationLabel.isHidden = true
         informationLabel.text = "로그인 중입니다..."
+        setViewsOpacity()
         setViewsDisabled()
         sender.setTitle("", for: .normal)
         sender.configuration?.showsActivityIndicator = true
@@ -134,11 +128,11 @@ class LogInViewController: UIViewController {
         }
     }
 
-    @IBAction func editIdentityTextField(_ sender: LogInTextField) {
+    @IBAction func editIdentityTextField(_ sender: UITextField) {
         viewModel.textChanged(sender.text, type: .identity)
     }
 
-    @IBAction func editPasswordTextField(_ sender: LogInTextField) {
+    @IBAction func editPasswordTextField(_ sender: UITextField) {
         viewModel.textChanged(sender.text, type: .password)
     }
 
@@ -152,22 +146,17 @@ class LogInViewController: UIViewController {
     }
 
     private func setViewsOpacity() {
-        logInButton.layer.opacity = 0.5
         findButton.layer.opacity = 0.5
         identityTextField.layer.opacity = 0.5
         passwordTextField.layer.opacity = 0.5
         autoLogInAgreeLabel.layer.opacity = 0.5
         autoLogInCheckButton.layer.opacity = 0.5
+        autoLogInTermsButton.layer.opacity = 0.5
     }
 
     private func distinguishAutoLogIn() {
         let isAgreed = UserDefaults.standard.bool(forKey: "AutoLogIn")
         if isAgreed == true {
-            let autoLogInTermsButton = UIButton()
-            autoLogInTermsButton.setTitle("자동 로그인 연결 약관", for: .normal)
-            autoLogInTermsButton.backgroundColor = .systemGray4
-            autoLogInTermsButton.setTitleColor(.darkGray, for: .normal)
-            autoLogInTermsButton.translatesAutoresizingMaskIntoConstraints = false
             scrollViewsView.addSubview(autoLogInTermsButton)
             autoLogInAgreeLabel.isHidden = true
             autoLogInCheckButton.isHidden = true
