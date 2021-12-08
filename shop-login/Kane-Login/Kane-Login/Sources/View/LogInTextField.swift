@@ -9,34 +9,46 @@ import UIKit
 
 @IBDesignable
 class LogInTextField: UITextField {
+    @IBInspectable var leftPadding: CGFloat = 0
+
     @IBInspectable
     var leftImage: UIImage? {
         didSet {
-            if leftImage == nil {
-                self.leftViewMode = .never
-            } else {
-                self.leftViewMode = .always
-            }
+            updateView()
+        }
+    }
+
+    @IBInspectable
+    var underlineColor: UIColor? {
+        didSet {
+            self.layer.shadowColor = underlineColor?.cgColor
+            self.layer.shadowOffset = CGSize(width: 0, height: 0.3)
+            self.layer.shadowOpacity = 0.5
+            self.layer.shadowRadius = 0.0
+        }
+    }
+
+    override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
+        var textRect = super.leftViewRect(forBounds: bounds)
+        textRect.origin.x += leftPadding
+        return textRect
+    }
+
+    private func updateView() {
+        if let image = leftImage {
+            self.leftViewMode = .always
             let size = self.bounds.width / 14
             let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size + 10, height: size))
             let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
             iconView.contentMode = .scaleAspectFit
             iconView.layer.cornerRadius = size / 2
-            iconView.image = leftImage
+            iconView.image = image
             iconView.clipsToBounds = true
             outerView.addSubview(iconView)
             self.leftView = outerView
-        }
-    }
-
-    @IBInspectable
-    var underlineColor: UIColor = .systemGray {
-        didSet {
-            let border = CALayer()
-            border.frame = CGRect(x: 0, y: self.frame.size.height, width: self.frame.width, height: 0.3)
-            border.borderWidth = 0.1
-            border.backgroundColor = underlineColor.cgColor
-            self.layer.addSublayer(border)
+        } else {
+            self.leftViewMode = .never
+            self.leftView = nil
         }
     }
 }

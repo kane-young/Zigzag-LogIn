@@ -84,17 +84,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-OR-tvV">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-OR-tvV">
                                                 <rect key="frame" x="335" y="628" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="b7M-gG-tiZ"/>
                                                     <constraint firstAttribute="height" constant="35" id="qDG-4P-XCH"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="">
-                                                    <backgroundConfiguration key="background" image="unchecked_normal" imageContentMode="scaleAspectFit"/>
-                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="unchecked_normal"/>
                                                 <connections>
                                                     <action selector="touchAutoLogInButtonWithSender:" destination="agk-af-7f8" eventType="touchUpInside" id="cqh-rG-YvL"/>
                                                 </connections>
@@ -130,12 +127,12 @@
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password_icon"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
-                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="editPasswordTextField:" destination="agk-af-7f8" eventType="editingChanged" id="MUX-aD-cwK"/>
+                                                    <action selector="editPasswordTextField:" destination="agk-af-7f8" eventType="editingChanged" id="wLn-nc-p1J"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="꽃피는시절 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFQ-y6-xZS" customClass="LogInTextField" customModule="Kane_Login" customModuleProvider="target">
@@ -150,12 +147,12 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="imvely"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
-                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="editIdentityTextField:" destination="agk-af-7f8" eventType="editingChanged" id="GFk-O3-vai"/>
+                                                    <action selector="editIdentityTextField:" destination="agk-af-7f8" eventType="editingChanged" id="4Vr-L7-lwJ"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -211,12 +208,12 @@
                         <outlet property="autoLogInCheckButton" destination="Vax-OR-tvV" id="8jT-am-jet"/>
                         <outlet property="findButton" destination="Bxk-ax-1aa" id="DDE-bt-5Cm"/>
                         <outlet property="findButtonBottomConstraint" destination="S3D-hn-l78" id="Wg0-fj-MdL"/>
-                        <outlet property="identityTextField" destination="KFQ-y6-xZS" id="cXL-3b-n1M"/>
+                        <outlet property="identityTextField" destination="KFQ-y6-xZS" id="Rjy-MA-g31"/>
                         <outlet property="informationLabel" destination="TKN-qo-tmc" id="mJD-Cv-viA"/>
                         <outlet property="logInButton" destination="kAN-6V-juY" id="01S-W3-Ch8"/>
                         <outlet property="logInButtonTopConstraint" destination="Rxg-Fe-7Yw" id="omh-fC-7RE"/>
                         <outlet property="passwordBottomConstraint" destination="JVU-KK-sRK" id="uT1-Ao-qkF"/>
-                        <outlet property="passwordTextField" destination="LnE-it-hw3" id="Bjz-sf-T6A"/>
+                        <outlet property="passwordTextField" destination="LnE-it-hw3" id="Jb8-A1-LY9"/>
                         <outlet property="scrollView" destination="CDG-Yu-Fgc" id="p1b-GT-oqs"/>
                         <outlet property="scrollViewsView" destination="Kii-3l-Cz0" id="HuJ-VW-8gq"/>
                         <outlet property="subInformationLabel" destination="BTC-F6-efn" id="nTs-kf-DsZ"/>
@@ -229,10 +226,10 @@
     </scenes>
     <designables>
         <designable name="KFQ-y6-xZS">
-            <size key="intrinsicContentSize" width="136" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="146" height="18.666666666666668"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="83.666666666666671" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="93.666666666666671" height="18.666666666666668"/>
         </designable>
     </designables>
     <resources>
