@@ -29,13 +29,24 @@ final class MainViewController: UIViewController {
     }
 
     private func changeLogInState() {
+        let title = isLogIn ? MainViewController.Style.BarButtonItemTitle.logOut :
+        MainViewController.Style.BarButtonItemTitle.logIn
         isLogIn = !isLogIn
-        navigationItem.rightBarButtonItem?.title = isLogIn ? "로그아웃" : "로그인"
+        navigationItem.rightBarButtonItem?.title = title
     }
 }
 
 extension MainViewController: LogInViewControllerDelegate {
     func didSuccessLogIn(identity: String) {
         changeLogInState()
+    }
+}
+
+extension MainViewController {
+    enum Style {
+        enum BarButtonItemTitle {
+            static let logOut = "로그아웃"
+            static let logIn = "로그인"
+        }
     }
 }
