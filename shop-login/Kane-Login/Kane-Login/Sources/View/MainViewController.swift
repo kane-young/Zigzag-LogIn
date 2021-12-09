@@ -29,10 +29,9 @@ final class MainViewController: UIViewController {
     }
 
     private func changeLogInState() {
-        let title = isLogIn ? MainViewController.Style.BarButtonItemTitle.logOut :
-        MainViewController.Style.BarButtonItemTitle.logIn
-        isLogIn = !isLogIn
+        let title = isLogIn ? Style.BarButtonItemTitle.logOut : Style.BarButtonItemTitle.logIn
         navigationItem.rightBarButtonItem?.title = title
+        isLogIn = !isLogIn
     }
 }
 
