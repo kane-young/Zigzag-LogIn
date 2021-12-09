@@ -8,7 +8,8 @@
 import UIKit
 
 @IBDesignable
-class LogInTextField: UITextField {
+final class LogInTextField: UITextField {
+
     @IBInspectable var leftPadding: CGFloat = 0
 
     @IBInspectable
