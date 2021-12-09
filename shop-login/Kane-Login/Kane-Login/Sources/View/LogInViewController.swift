@@ -57,39 +57,6 @@ final class LogInViewController: UIViewController {
         removeNotification()
     }
 
-    private func configureNavigationBar() {
-        self.navigationItem.title = Style.Navigation.title
-    }
-
-    private func configureLabels() {
-        configureInformationLabels()
-        configureAutoLogInAgreeLabel()
-    }
-
-    private func configureInformationLabels() {
-        informationLabel.adjustsFontSizeToFitWidth = true
-        subInformationLabel.adjustsFontSizeToFitWidth = true
-    }
-
-    private func configureAutoLogInAgreeLabel() {
-        guard let autoLogInAgreeText = autoLogInAgreeLabel.text else { return }
-        let attributedText = NSMutableAttributedString(string: autoLogInAgreeText)
-        let range = (autoLogInAgreeText as NSString).range(of: Style.AutoLogInAgreeLabel.textForAttributed)
-        attributedText.addAttribute(.foregroundColor, value: UIColor.systemPink, range: range)
-        autoLogInAgreeLabel.attributedText = attributedText
-    }
-
-    @IBAction func touchAutoLogInButton(sender: UIButton) {
-        if ispressed {
-            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedNormal), for: .normal)
-            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedHighlighted), for: .highlighted)
-        } else {
-            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedNormal), for: .normal)
-            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedHighlighted), for: .highlighted)
-        }
-        ispressed = !ispressed
-    }
-
     private func viewModelBind() {
         viewModel.identity.bind { [weak self] textState in
             let color = self?.textFieldColor(with: textState)
@@ -115,6 +82,48 @@ final class LogInViewController: UIViewController {
         }
     }
 
+    private func configureLabels() {
+        configureInformationLabels()
+        configureAutoLogInAgreeLabel()
+    }
+
+    private func configureInformationLabels() {
+        informationLabel.adjustsFontSizeToFitWidth = true
+        subInformationLabel.adjustsFontSizeToFitWidth = true
+    }
+
+    private func configureAutoLogInAgreeLabel() {
+        guard let autoLogInAgreeText = autoLogInAgreeLabel.text else { return }
+        let attributedText = NSMutableAttributedString(string: autoLogInAgreeText)
+        let range = (autoLogInAgreeText as NSString).range(of: Style.AutoLogInAgreeLabel.textForAttributed)
+        attributedText.addAttribute(.foregroundColor, value: UIColor.systemPink, range: range)
+        autoLogInAgreeLabel.attributedText = attributedText
+    }
+
+    private func configureNavigationBar() {
+        self.navigationItem.title = Style.Navigation.title
+    }
+
+    private func distinguishAutoLogIn() {
+        ispressed = UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoLogIn)
+        if ispressed {
+            deActivateConstraints()
+            hideAutoLogInAgreeViews()
+            setUpAutoLogInTermsButton()
+        }
+    }
+
+    @IBAction func touchAutoLogInButton(sender: UIButton) {
+        if ispressed {
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedNormal), for: .normal)
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedHighlighted), for: .highlighted)
+        } else {
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedNormal), for: .normal)
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedHighlighted), for: .highlighted)
+        }
+        ispressed = !ispressed
+    }
+
     @IBAction func touchLogInButton(sender: UIButton) {
         if ispressed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
             UserDefaults.standard.set(true, forKey: UserDefaults.Key.isAutoLogIn)
@@ -136,14 +145,15 @@ final class LogInViewController: UIViewController {
     private func progressLogIn() {
         DispatchQueue.global().asyncAfter(deadline: .now() + 5.0) {
             DispatchQueue.main.async {
-                self.didSuccessLogIn()
+                self.backToMainViewController()
             }
         }
     }
 
-    private func didSuccessLogIn() {
+    private func backToMainViewController() {
         informationLabel.text = Style.InformationText.success
-        delegate?.didSuccessLogIn(identity: self.identityTextField.text!)
+        guard let identity = identityTextField.text else { return }
+        delegate?.didSuccessLogIn(identity: identity)
         navigationController?.popViewController(animated: true)
     }
 
@@ -234,15 +244,6 @@ final class LogInViewController: UIViewController {
         autoLogInAgreeLabel.layer.opacity = 0.5
         autoLogInCheckButton.layer.opacity = 0.5
         autoLogInTermsButton.layer.opacity = 0.5
-    }
-
-    private func distinguishAutoLogIn() {
-        ispressed = UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoLogIn)
-        if ispressed {
-            deActivateConstraints()
-            hideAutoLogInAgreeViews()
-            setUpAutoLogInTermsButton()
-        }
     }
 
     private func deActivateConstraints() {
