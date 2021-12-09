@@ -187,9 +187,10 @@ class LogInViewController: UIViewController {
     }
 
     @objc private func keyboardWillHide(_ notification: Notification) {
+        let safeArea = view.safeAreaLayoutGuide
         scrollView.contentInset.bottom = 0
         scrollViewBottomConstraint.isActive = false
-        scrollViewBottomConstraint = scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        scrollViewBottomConstraint = scrollView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         scrollViewBottomConstraint.isActive = true
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
