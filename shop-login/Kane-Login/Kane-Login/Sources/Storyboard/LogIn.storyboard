@@ -134,7 +134,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="VRg-qw-MSl"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password_icon"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
@@ -258,7 +258,7 @@
             <size key="intrinsicContentSize" width="146" height="18.666666666666668"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="93.666666666666671" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="93.666666666666671" height="17"/>
         </designable>
     </designables>
     <resources>
