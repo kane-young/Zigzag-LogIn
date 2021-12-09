@@ -22,6 +22,7 @@
 		C3EC3D5C27621D4C006ECF3B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D5B27621D4C006ECF3B /* UserDefaults+Extension.swift */; };
 		C3EC3D5E276221BF006ECF3B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C3EC3D5D276221BF006ECF3B /* .swiftlint.yml */; };
 		C3EC3D8A2762273A006ECF3B /* LogInValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D892762273A006ECF3B /* LogInValidatorTests.swift */; };
+		C3EC3D8E27622FC0006ECF3B /* LogInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D8D27622FC0006ECF3B /* LogInViewModelTests.swift */; };
 		C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E808275F67630032D927 /* LogInViewModel.swift */; };
 		C3F8E80B275F727B0032D927 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80A275F727B0032D927 /* Observable.swift */; };
 		C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80E275F8D470032D927 /* ValidationType.swift */; };
@@ -60,6 +61,7 @@
 		C3EC3D5D276221BF006ECF3B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C3EC3D8027622723006ECF3B /* Kane-LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kane-LoginTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EC3D892762273A006ECF3B /* LogInValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInValidatorTests.swift; sourceTree = "<group>"; };
+		C3EC3D8D27622FC0006ECF3B /* LogInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModelTests.swift; sourceTree = "<group>"; };
 		C3F8E808275F67630032D927 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		C3F8E80A275F727B0032D927 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C3F8E80E275F8D470032D927 /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				C3EC3D892762273A006ECF3B /* LogInValidatorTests.swift */,
+				C3EC3D8D27622FC0006ECF3B /* LogInViewModelTests.swift */,
 			);
 			path = "Kane-LoginTests";
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EC3D8E27622FC0006ECF3B /* LogInViewModelTests.swift in Sources */,
 				C3EC3D8A2762273A006ECF3B /* LogInValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

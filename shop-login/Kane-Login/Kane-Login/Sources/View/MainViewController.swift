@@ -8,7 +8,6 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-
     private var isLogIn: Bool = false
 
     @IBAction func touchRightBarButtonItem(_ sender: UIBarButtonItem) {

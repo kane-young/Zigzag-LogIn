@@ -8,7 +8,6 @@
 import UIKit
 
 final class LogInViewController: UIViewController {
-
     static let identifier: String = "LogInViewController"
 
     @IBOutlet weak var informationLabel: UILabel!
