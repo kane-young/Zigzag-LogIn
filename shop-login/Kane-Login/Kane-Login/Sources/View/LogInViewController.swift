@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController {
 
     static let identifier: String = "LogInViewController"
 
@@ -27,7 +27,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     private lazy var autoLogInTermsButton: UIButton = {
         let autoLogInTermsButton = UIButton()
-        autoLogInTermsButton.setTitle("자동 로그인 연결 약관", for: .normal)
+        autoLogInTermsButton.setTitle(Style.AutoLogInTermsButton.title, for: .normal)
         autoLogInTermsButton.backgroundColor = .systemGray4
         autoLogInTermsButton.setTitleColor(.darkGray, for: .normal)
         autoLogInTermsButton.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +58,7 @@ class LogInViewController: UIViewController {
     }
 
     private func configureNavigationBar() {
-        self.navigationItem.title = "로그인(꽃피는시절)"
+        self.navigationItem.title = Style.Navigation.title
     }
 
     private func configureLabels() {
@@ -74,21 +74,20 @@ class LogInViewController: UIViewController {
     private func configureAutoLogInAgreeLabel() {
         guard let autoLogInAgreeText = autoLogInAgreeLabel.text else { return }
         let attributedText = NSMutableAttributedString(string: autoLogInAgreeText)
-        attributedText.addAttribute(.foregroundColor, value: UIColor.systemPink,
-                                   range: (autoLogInAgreeText as NSString).range(of: "자동 로그인 약관"))
+        let range = (autoLogInAgreeText as NSString).range(of: Style.AutoLogInAgreeLabel.textForAttributed)
+        attributedText.addAttribute(.foregroundColor, value: UIColor.systemPink, range: range)
         autoLogInAgreeLabel.attributedText = attributedText
     }
 
     @IBAction func touchAutoLogInButton(sender: UIButton) {
         if ispressed {
-            self.ispressed = false
-            sender.setImage(UIImage(named: "unchecked_normal"), for: .normal)
-            sender.setImage(UIImage(named: "unchecked_pressed"), for: .highlighted)
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedNormal), for: .normal)
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedHighlighted), for: .highlighted)
         } else {
-            self.ispressed = true
-            sender.setImage(UIImage(named: "checked_normal"), for: .normal)
-            sender.setImage(UIImage(named: "checked_pressed"), for: .highlighted)
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedNormal), for: .normal)
+            sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedHighlighted), for: .highlighted)
         }
+        ispressed = !ispressed
     }
 
     private func viewModelBind() {
@@ -108,33 +107,50 @@ class LogInViewController: UIViewController {
     private func textFieldColor(with textState: TextState) -> CGColor {
         switch textState {
         case .empty:
-            return UIColor.systemBackground.cgColor
+            return Style.TextFieldColor.empty
         case .valid:
-            return UIColor.systemGreen.cgColor
+            return Style.TextFieldColor.valid
         case .invalid:
-            return UIColor.systemRed.cgColor
+            return Style.TextFieldColor.invalid
         }
     }
 
     @IBAction func touchLogInButton(sender: UIButton) {
         if ispressed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
             UserDefaults.standard.set(true, forKey: "AutoLogIn")
-            subInformationLabel.isHidden = true
-            informationLabel.text = "로그인 중입니다..."
-            setViewsOpacity()
-            setViewsDisabled()
-            sender.setTitle("", for: .normal)
-            sender.configuration?.showsActivityIndicator = true
-            DispatchQueue.global().async {
-                sleep(5)
-                DispatchQueue.main.async {
-                    self.informationLabel.text = "로그인 성공!"
-                    self.delegate?.didSuccessLogIn(identity: self.identityTextField.text!)
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }
+            changeViewsForLogIn()
+            progressLogIn()
         } else {
-            alert()
+            alertAutoLogInRequest()
+        }
+    }
+
+    private func changeViewsForLogIn() {
+        subInformationLabel.isHidden = true
+        informationLabel.text = Style.InformationText.progress
+        changeLogInButtonForLogIn()
+        setViewsDisabled()
+        setViewsOpacity()
+    }
+
+    private func progressLogIn() {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5.0) {
+            DispatchQueue.main.async {
+                self.didSuccessLogIn()
+            }
+        }
+    }
+
+    private func didSuccessLogIn() {
+        informationLabel.text = Style.InformationText.success
+        delegate?.didSuccessLogIn(identity: self.identityTextField.text!)
+        navigationController?.popViewController(animated: true)
+    }
+
+    private func changeLogInButtonForLogIn() {
+        if #available(iOS 15.0, *) {
+            logInButton.configuration?.showsActivityIndicator = true
+            logInButton.setTitle(Style.LogInButtonTitle.progress, for: .normal)
         }
     }
 
@@ -146,7 +162,6 @@ class LogInViewController: UIViewController {
         viewModel.textChanged(sender.text, type: .password)
     }
 
-    // MARK: Method associated Notification
     private func setUpNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -159,7 +174,6 @@ class LogInViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    // MARK: Set Keyboard associated Method
     private func addTapGestureRecognizer() {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(moveDownKeyboard))
         recognizer.cancelsTouchesInView = false
@@ -195,11 +209,11 @@ class LogInViewController: UIViewController {
         view.endEditing(true)
     }
 
-    private func alert() {
-        let alert = UIAlertController(title: "자동 로그인 약관 동의",
-                                      message: "자동 로그인 약관에 동의하시고 로그인하셔야 합니다.",
+    private func alertAutoLogInRequest() {
+        let alert = UIAlertController(title: Style.AutoLogInRequest.title,
+                                      message: Style.AutoLogInRequest.message,
                                       preferredStyle: .alert)
-        let okay = UIAlertAction(title: "확인", style: .default)
+        let okay = UIAlertAction(title: Style.AutoLogInRequest.action, style: .default)
         alert.addAction(okay)
         present(alert, animated: true)
     }
@@ -223,23 +237,72 @@ class LogInViewController: UIViewController {
     }
 
     private func distinguishAutoLogIn() {
-        let isAgreed = UserDefaults.standard.bool(forKey: "AutoLogIn")
-        ispressed = isAgreed
-        if isAgreed == true {
-            scrollViewsView.addSubview(autoLogInTermsButton)
-            autoLogInAgreeLabel.isHidden = true
-            autoLogInCheckButton.isHidden = true
-            logInButtonTopConstraint.isActive = false
-            passwordBottomConstraint.isActive = false
-            findButtonBottomConstraint.isActive = false
-            NSLayoutConstraint.activate([
-                logInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-                findButton.bottomAnchor.constraint(equalTo: autoLogInTermsButton.topAnchor),
-                autoLogInTermsButton.heightAnchor.constraint(equalToConstant: 50),
-                autoLogInTermsButton.leadingAnchor.constraint(equalTo: scrollViewsView.leadingAnchor),
-                autoLogInTermsButton.trailingAnchor.constraint(equalTo: scrollViewsView.trailingAnchor),
-                autoLogInTermsButton.bottomAnchor.constraint(equalTo: scrollViewsView.bottomAnchor)
-            ])
+        ispressed = UserDefaults.standard.bool(forKey: "AutoLogIn")
+        if ispressed {
+            deActivateConstraints()
+            hideAutoLogInAgreeViews()
+            setUpAutoLogInTermsButton()
+        }
+    }
+
+    private func deActivateConstraints() {
+        logInButtonTopConstraint.isActive = false
+        passwordBottomConstraint.isActive = false
+        findButtonBottomConstraint.isActive = false
+    }
+
+    private func hideAutoLogInAgreeViews() {
+        autoLogInAgreeLabel.isHidden = true
+        autoLogInCheckButton.isHidden = true
+    }
+
+    private func setUpAutoLogInTermsButton() {
+        scrollViewsView.addSubview(autoLogInTermsButton)
+        NSLayoutConstraint.activate([
+            logInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            findButton.bottomAnchor.constraint(equalTo: autoLogInTermsButton.topAnchor),
+            autoLogInTermsButton.heightAnchor.constraint(equalToConstant: 50),
+            autoLogInTermsButton.leadingAnchor.constraint(equalTo: scrollViewsView.leadingAnchor),
+            autoLogInTermsButton.trailingAnchor.constraint(equalTo: scrollViewsView.trailingAnchor),
+            autoLogInTermsButton.bottomAnchor.constraint(equalTo: scrollViewsView.bottomAnchor)
+        ])
+    }
+}
+
+extension LogInViewController {
+    enum Style {
+        enum Navigation {
+            static let title = "로그인(꽃피는시절)"
+        }
+        enum AutoLogInTermsButton {
+            static let title = "자동 로그인 연결 약관"
+        }
+        enum AutoLogInAgreeLabel {
+            static let textForAttributed = "자동 로그인 약관"
+        }
+        enum AutoLogInAgreeButton {
+            static let uncheckedNormal = "unchecked_normal"
+            static let uncheckedHighlighted = "unchecked_pressed"
+            static let checkedNormal = "checked_normal"
+            static let checkedHighlighted = "checked_pressed"
+        }
+        enum AutoLogInRequest {
+            static let title = "자동 로그인 약관 동의"
+            static let message = "자동 로그인 약관에 동의하시고 로그인하셔야 합니다."
+            static let action = "확인"
+        }
+        enum TextFieldColor {
+            static let empty = UIColor.systemBackground.cgColor
+            static let valid = UIColor.systemGreen.cgColor
+            static let invalid = UIColor.systemRed.cgColor
+        }
+        enum InformationText {
+            static let progress = "로그인 중입니다..."
+            static let success = "로그인 성공!"
+        }
+        enum LogInButtonTitle {
+            static let progress = ""
+            static let normal = "로그인"
         }
     }
 }
