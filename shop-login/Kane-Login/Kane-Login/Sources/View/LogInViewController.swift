@@ -10,6 +10,7 @@ import UIKit
 class LogInViewController: UIViewController {
 
     static let identifier: String = "LogInViewController"
+
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var subInformationLabel: UILabel!
     @IBOutlet weak var autoLogInAgreeLabel: UILabel!
@@ -43,7 +44,6 @@ class LogInViewController: UIViewController {
         configureLabels()
         configureNavigationBar()
         distinguishAutoLogIn()
-        configureTextFields()
         addTapGestureRecognizer()
     }
 
@@ -64,13 +64,6 @@ class LogInViewController: UIViewController {
     private func configureLabels() {
         configureInformationLabels()
         configureAutoLogInAgreeLabel()
-    }
-
-    private func configureTextFields() {
-        identityTextField.layer.borderWidth = 1
-        passwordTextField.layer.borderWidth = 1
-        identityTextField.layer.borderColor = UIColor.systemBackground.cgColor
-        passwordTextField.layer.borderColor = UIColor.systemBackground.cgColor
     }
 
     private func configureInformationLabels() {
@@ -250,4 +243,3 @@ class LogInViewController: UIViewController {
         }
     }
 }
-

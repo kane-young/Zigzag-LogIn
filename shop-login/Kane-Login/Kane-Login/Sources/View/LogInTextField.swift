@@ -29,10 +29,25 @@ class LogInTextField: UITextField {
         }
     }
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureBorderAttributes()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        configureBorderAttributes()
+    }
+
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         var textRect = super.leftViewRect(forBounds: bounds)
         textRect.origin.x += leftPadding
         return textRect
+    }
+
+    private func configureBorderAttributes() {
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.systemBackground.cgColor
     }
 
     private func updateView() {
