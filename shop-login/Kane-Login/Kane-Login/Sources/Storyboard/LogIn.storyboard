@@ -189,7 +189,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="trailing" secondItem="ELS-T5-vBd" secondAttribute="trailing" id="0Ol-JP-NCX"/>
-                                    <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="lessThanOrEqual" secondItem="l3L-gj-1pD" secondAttribute="height" multiplier="0.8" id="Kh7-0M-HIz"/>
+                                    <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="greaterThanOrEqual" secondItem="l3L-gj-1pD" secondAttribute="height" multiplier="0.2" priority="250" id="Kh7-0M-HIz"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="height" secondItem="l3L-gj-1pD" secondAttribute="height" priority="750" id="cd0-76-ZYS"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="leading" secondItem="ELS-T5-vBd" secondAttribute="leading" id="iZV-Lf-Gfp"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="bottom" secondItem="ELS-T5-vBd" secondAttribute="bottom" id="oJo-6U-ygW"/>
@@ -207,6 +207,7 @@
                             <constraint firstItem="CDG-Yu-Fgc" firstAttribute="top" secondItem="G2l-8d-mOK" secondAttribute="top" id="DFO-M2-V41"/>
                             <constraint firstItem="CDG-Yu-Fgc" firstAttribute="leading" secondItem="G2l-8d-mOK" secondAttribute="leading" id="Fec-Xe-lxT"/>
                             <constraint firstItem="G2l-8d-mOK" firstAttribute="trailing" secondItem="CDG-Yu-Fgc" secondAttribute="trailing" id="Ico-I8-iQg"/>
+                            <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="lessThanOrEqual" secondItem="qJZ-15-TdX" secondAttribute="height" multiplier="0.8" id="azp-35-IeH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -221,21 +222,22 @@
                         <outlet property="passwordBottomConstraint" destination="JVU-KK-sRK" id="uT1-Ao-qkF"/>
                         <outlet property="passwordTextField" destination="LnE-it-hw3" id="Jb8-A1-LY9"/>
                         <outlet property="scrollView" destination="CDG-Yu-Fgc" id="p1b-GT-oqs"/>
+                        <outlet property="scrollViewBottomConstraint" destination="0aH-k2-8St" id="GUg-h6-Jpt"/>
                         <outlet property="scrollViewsView" destination="Kii-3l-Cz0" id="HuJ-VW-8gq"/>
                         <outlet property="subInformationLabel" destination="BTC-F6-efn" id="nTs-kf-DsZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmM-AF-Sz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3326" y="-308"/>
+            <point key="canvasLocation" x="3131" y="-399"/>
         </scene>
     </scenes>
     <designables>
         <designable name="KFQ-y6-xZS">
-            <size key="intrinsicContentSize" width="146" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="101" height="18.666666666666668"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="93.666666666666671" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="48.666666666666664" height="18.666666666666668"/>
         </designable>
     </designables>
     <resources>
