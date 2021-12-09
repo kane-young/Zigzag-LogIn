@@ -35,6 +35,7 @@ class LogInViewController: UIViewController {
 
     private var ispressed = false
     private var viewModel = LogInViewModel(validator: LogInValidator())
+    weak var delegate: LogInViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,6 +136,8 @@ class LogInViewController: UIViewController {
                 sleep(5)
                 DispatchQueue.main.async {
                     self.informationLabel.text = "로그인 성공!"
+                    self.delegate?.didSuccessLogIn(identity: self.identityTextField.text!)
+                    self.navigationController?.popViewController(animated: true)
                 }
             }
         } else {
@@ -228,6 +231,7 @@ class LogInViewController: UIViewController {
 
     private func distinguishAutoLogIn() {
         let isAgreed = UserDefaults.standard.bool(forKey: "AutoLogIn")
+        ispressed = isAgreed
         if isAgreed == true {
             scrollViewsView.addSubview(autoLogInTermsButton)
             autoLogInAgreeLabel.isHidden = true
@@ -246,3 +250,4 @@ class LogInViewController: UIViewController {
         }
     }
 }
+
