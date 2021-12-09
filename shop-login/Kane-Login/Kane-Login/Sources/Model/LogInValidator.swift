@@ -11,6 +11,7 @@ final class LogInValidator: Validatable {
     private var isIdentityValidation: Bool = false
     private var isPasswordValidation: Bool = false
 
+    @discardableResult
     func validate(_ text: String?, type: ValidationType) -> TextState {
         guard let text = text else {
             return .empty

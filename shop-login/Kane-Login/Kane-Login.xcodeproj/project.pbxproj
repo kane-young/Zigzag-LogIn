@@ -21,6 +21,7 @@
 		C3EC3D5A2761FBAE006ECF3B /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */; };
 		C3EC3D5C27621D4C006ECF3B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D5B27621D4C006ECF3B /* UserDefaults+Extension.swift */; };
 		C3EC3D5E276221BF006ECF3B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C3EC3D5D276221BF006ECF3B /* .swiftlint.yml */; };
+		C3EC3D8A2762273A006ECF3B /* LogInValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D892762273A006ECF3B /* LogInValidatorTests.swift */; };
 		C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E808275F67630032D927 /* LogInViewModel.swift */; };
 		C3F8E80B275F727B0032D927 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80A275F727B0032D927 /* Observable.swift */; };
 		C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80E275F8D470032D927 /* ValidationType.swift */; };
@@ -28,6 +29,16 @@
 		C3F8E813275F8D990032D927 /* LogInValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E812275F8D990032D927 /* LogInValidator.swift */; };
 		C3F8E815275F8F790032D927 /* TextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E814275F8F790032D927 /* TextState.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3EC3D8427622723006ECF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C333F8B12759DE22009C61C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C333F8B82759DE22009C61C3;
+			remoteInfo = "Kane-Login";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		03BBD9FF9285EF204355FAF7 /* Pods-Kane-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kane-Login.debug.xcconfig"; path = "Target Support Files/Pods-Kane-Login/Pods-Kane-Login.debug.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +58,8 @@
 		C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		C3EC3D5B27621D4C006ECF3B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		C3EC3D5D276221BF006ECF3B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C3EC3D8027622723006ECF3B /* Kane-LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kane-LoginTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EC3D892762273A006ECF3B /* LogInValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInValidatorTests.swift; sourceTree = "<group>"; };
 		C3F8E808275F67630032D927 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		C3F8E80A275F727B0032D927 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C3F8E80E275F8D470032D927 /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
@@ -62,6 +75,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				447F8D9D855FA3B1505DF933 /* Pods_Kane_Login.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EC3D7D27622723006ECF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				C333F8BB2759DE22009C61C3 /* Kane-Login */,
+				C3EC3D8127622723006ECF3B /* Kane-LoginTests */,
 				C333F8BA2759DE22009C61C3 /* Products */,
 				1972F37D8125C487DC2082C9 /* Pods */,
 				097247E943206FE5F6EB1B49 /* Frameworks */,
@@ -99,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C333F8B92759DE22009C61C3 /* Kane-Login.app */,
+				C3EC3D8027622723006ECF3B /* Kane-LoginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +188,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		C3EC3D8127622723006ECF3B /* Kane-LoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3EC3D892762273A006ECF3B /* LogInValidatorTests.swift */,
+			);
+			path = "Kane-LoginTests";
+			sourceTree = "<group>";
+		};
 		C3F8E80C275F8ACB0032D927 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +238,24 @@
 			productReference = C333F8B92759DE22009C61C3 /* Kane-Login.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C3EC3D7F27622723006ECF3B /* Kane-LoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3EC3D8627622723006ECF3B /* Build configuration list for PBXNativeTarget "Kane-LoginTests" */;
+			buildPhases = (
+				C3EC3D7C27622723006ECF3B /* Sources */,
+				C3EC3D7D27622723006ECF3B /* Frameworks */,
+				C3EC3D7E27622723006ECF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3EC3D8527622723006ECF3B /* PBXTargetDependency */,
+			);
+			name = "Kane-LoginTests";
+			productName = "Kane-LoginTests";
+			productReference = C3EC3D8027622723006ECF3B /* Kane-LoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +268,10 @@
 				TargetAttributes = {
 					C333F8B82759DE22009C61C3 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					C3EC3D7F27622723006ECF3B = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C333F8B82759DE22009C61C3;
 					};
 				};
 			};
@@ -237,6 +289,7 @@
 			projectRoot = "";
 			targets = (
 				C333F8B82759DE22009C61C3 /* Kane-Login */,
+				C3EC3D7F27622723006ECF3B /* Kane-LoginTests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +304,13 @@
 				C333F8C92759DE24009C61C3 /* LaunchScreen.storyboard in Resources */,
 				C333F8C62759DE24009C61C3 /* Assets.xcassets in Resources */,
 				C333F8C42759DE22009C61C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EC3D7E27622723006ECF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +380,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3EC3D7C27622723006ECF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EC3D8A2762273A006ECF3B /* LogInValidatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3EC3D8527622723006ECF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C333F8B82759DE22009C61C3 /* Kane-Login */;
+			targetProxy = C3EC3D8427622723006ECF3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C333F8C22759DE22009C61C3 /* Main.storyboard */ = {
@@ -516,6 +592,52 @@
 			};
 			name = Release;
 		};
+		C3EC3D8727622723006ECF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NNGLKCK57;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "young.Kane-LoginTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kane-Login.app/Kane-Login";
+			};
+			name = Debug;
+		};
+		C3EC3D8827622723006ECF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3NNGLKCK57;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "young.Kane-LoginTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kane-Login.app/Kane-Login";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -533,6 +655,15 @@
 			buildConfigurations = (
 				C333F8CE2759DE24009C61C3 /* Debug */,
 				C333F8CF2759DE24009C61C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3EC3D8627622723006ECF3B /* Build configuration list for PBXNativeTarget "Kane-LoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3EC3D8727622723006ECF3B /* Debug */,
+				C3EC3D8827622723006ECF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
