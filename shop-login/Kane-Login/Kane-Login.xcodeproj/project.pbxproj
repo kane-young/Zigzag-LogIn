@@ -19,6 +19,7 @@
 		C3DA4444275E38EF006EF32A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4443275E38EF006EF32A /* LogInViewController.swift */; };
 		C3E719E22761F5D400AEF5B7 /* LogInViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E719E12761F5D400AEF5B7 /* LogInViewControllerDelegate.swift */; };
 		C3EC3D5A2761FBAE006ECF3B /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */; };
+		C3EC3D5C27621D4C006ECF3B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D5B27621D4C006ECF3B /* UserDefaults+Extension.swift */; };
 		C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E808275F67630032D927 /* LogInViewModel.swift */; };
 		C3F8E80B275F727B0032D927 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80A275F727B0032D927 /* Observable.swift */; };
 		C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80E275F8D470032D927 /* ValidationType.swift */; };
@@ -43,6 +44,7 @@
 		C3DA4443275E38EF006EF32A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C3E719E12761F5D400AEF5B7 /* LogInViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewControllerDelegate.swift; sourceTree = "<group>"; };
 		C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		C3EC3D5B27621D4C006ECF3B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		C3F8E808275F67630032D927 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		C3F8E80A275F727B0032D927 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C3F8E80E275F8D470032D927 /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */,
+				C3EC3D5B27621D4C006ECF3B /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				C3F8E813275F8D990032D927 /* LogInValidator.swift in Sources */,
 				C31611EF275D0482002D8126 /* LogInTextField.swift in Sources */,
 				C3EC3D5A2761FBAE006ECF3B /* UIStoryboard+Extension.swift in Sources */,
+				C3EC3D5C27621D4C006ECF3B /* UserDefaults+Extension.swift in Sources */,
 				C333F8BD2759DE22009C61C3 /* AppDelegate.swift in Sources */,
 				C3F8E80B275F727B0032D927 /* Observable.swift in Sources */,
 				C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */,

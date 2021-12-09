@@ -117,7 +117,7 @@ final class LogInViewController: UIViewController {
 
     @IBAction func touchLogInButton(sender: UIButton) {
         if ispressed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
-            UserDefaults.standard.set(true, forKey: "AutoLogIn")
+            UserDefaults.standard.set(true, forKey: UserDefaults.Key.isAutoLogIn)
             changeViewsForLogIn()
             progressLogIn()
         } else {
@@ -237,7 +237,7 @@ final class LogInViewController: UIViewController {
     }
 
     private func distinguishAutoLogIn() {
-        ispressed = UserDefaults.standard.bool(forKey: "AutoLogIn")
+        ispressed = UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoLogIn)
         if ispressed {
             deActivateConstraints()
             hideAutoLogInAgreeViews()
