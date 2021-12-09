@@ -29,7 +29,7 @@
                                                         <rect key="frame" x="20" y="106.66666666666666" width="350" height="294.66666666666674"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="BNB-0k-2nr">
-                                                                <rect key="frame" x="23.333333333333343" y="0.0" width="303.33333333333326" height="196"/>
+                                                                <rect key="frame" x="23.666666666666657" y="0.0" width="302.66666666666674" height="196"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="BNB-0k-2nr" secondAttribute="height" multiplier="170:110" id="0Hv-Pe-ajG"/>
                                                                 </constraints>
@@ -66,13 +66,23 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="BNB-0k-2nr" firstAttribute="height" relation="lessThanOrEqual" secondItem="GKa-pc-T13" secondAttribute="height" multiplier="0.386047" id="2Ie-wy-R0F"/>
                                                     <constraint firstItem="MxJ-Ac-fQo" firstAttribute="centerY" secondItem="GKa-pc-T13" secondAttribute="centerY" id="VKm-n6-wvQ"/>
+                                                    <constraint firstItem="BNB-0k-2nr" firstAttribute="height" secondItem="GKa-pc-T13" secondAttribute="height" multiplier="0.38" id="aOB-wZ-UZE"/>
                                                     <constraint firstAttribute="trailing" secondItem="MxJ-Ac-fQo" secondAttribute="trailing" constant="20" id="ciK-bp-ufm"/>
                                                     <constraint firstItem="MxJ-Ac-fQo" firstAttribute="height" relation="lessThanOrEqual" secondItem="GKa-pc-T13" secondAttribute="height" id="nbf-Vl-6Ns"/>
                                                     <constraint firstItem="MxJ-Ac-fQo" firstAttribute="leading" secondItem="GKa-pc-T13" secondAttribute="leading" constant="20" id="u4M-jb-2ne"/>
                                                     <constraint firstItem="MxJ-Ac-fQo" firstAttribute="centerX" secondItem="GKa-pc-T13" secondAttribute="centerX" id="vYx-w2-Iy0"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="aOB-wZ-UZE"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="aOB-wZ-UZE"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동 로그인 약관에 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB5-0c-WfH">
                                                 <rect key="frame" x="20" y="635" width="161" height="21"/>
@@ -96,7 +106,7 @@
                                                     <action selector="touchAutoLogInButtonWithSender:" destination="agk-af-7f8" eventType="touchUpInside" id="cqh-rG-YvL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-6V-juY">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-6V-juY">
                                                 <rect key="frame" x="20" y="676" width="350" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <constraints>
@@ -189,8 +199,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="trailing" secondItem="ELS-T5-vBd" secondAttribute="trailing" id="0Ol-JP-NCX"/>
-                                    <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="greaterThanOrEqual" secondItem="l3L-gj-1pD" secondAttribute="height" multiplier="0.2" priority="250" id="Kh7-0M-HIz"/>
-                                    <constraint firstItem="Kii-3l-Cz0" firstAttribute="height" secondItem="l3L-gj-1pD" secondAttribute="height" priority="750" id="cd0-76-ZYS"/>
+                                    <constraint firstItem="Kii-3l-Cz0" firstAttribute="height" secondItem="l3L-gj-1pD" secondAttribute="height" priority="250" id="cd0-76-ZYS"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="leading" secondItem="ELS-T5-vBd" secondAttribute="leading" id="iZV-Lf-Gfp"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="bottom" secondItem="ELS-T5-vBd" secondAttribute="bottom" id="oJo-6U-ygW"/>
                                     <constraint firstItem="Kii-3l-Cz0" firstAttribute="width" secondItem="l3L-gj-1pD" secondAttribute="width" id="u6U-fe-ZHr"/>
@@ -204,11 +213,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="G2l-8d-mOK" firstAttribute="bottom" secondItem="CDG-Yu-Fgc" secondAttribute="bottom" id="0aH-k2-8St"/>
+                            <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="greaterThanOrEqual" secondItem="qJZ-15-TdX" secondAttribute="height" multiplier="0.55" priority="750" id="6rr-ZI-pf1"/>
                             <constraint firstItem="CDG-Yu-Fgc" firstAttribute="top" secondItem="G2l-8d-mOK" secondAttribute="top" id="DFO-M2-V41"/>
                             <constraint firstItem="CDG-Yu-Fgc" firstAttribute="leading" secondItem="G2l-8d-mOK" secondAttribute="leading" id="Fec-Xe-lxT"/>
                             <constraint firstItem="G2l-8d-mOK" firstAttribute="trailing" secondItem="CDG-Yu-Fgc" secondAttribute="trailing" id="Ico-I8-iQg"/>
                             <constraint firstItem="GKa-pc-T13" firstAttribute="height" relation="lessThanOrEqual" secondItem="qJZ-15-TdX" secondAttribute="height" multiplier="0.8" id="azp-35-IeH"/>
+                            <constraint firstItem="BNB-0k-2nr" firstAttribute="height" secondItem="qJZ-15-TdX" secondAttribute="height" multiplier="0.232227" id="zvM-RV-Dak"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zvM-RV-Dak"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="zvM-RV-Dak"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="autoLogInAgreeLabel" destination="kB5-0c-WfH" id="hmz-Tm-5ts"/>
@@ -234,10 +255,10 @@
     </scenes>
     <designables>
         <designable name="KFQ-y6-xZS">
-            <size key="intrinsicContentSize" width="101" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="146" height="18.666666666666668"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="48.666666666666664" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="93.666666666666671" height="18.666666666666668"/>
         </designable>
     </designables>
     <resources>
