@@ -123,7 +123,7 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func touchLogInButton(sender: UIButton) {
-        if ispressed {
+        if ispressed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
             UserDefaults.standard.set(true, forKey: "AutoLogIn")
             subInformationLabel.isHidden = true
             informationLabel.text = "로그인 중입니다..."
@@ -180,7 +180,6 @@ class LogInViewController: UIViewController {
         scrollViewBottomConstraint = scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
                                                                         constant: -endFrame.height)
         scrollViewBottomConstraint.isActive = true
-        scrollView.contentInset.bottom = 30
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
@@ -188,7 +187,6 @@ class LogInViewController: UIViewController {
 
     @objc private func keyboardWillHide(_ notification: Notification) {
         let safeArea = view.safeAreaLayoutGuide
-        scrollView.contentInset.bottom = 0
         scrollViewBottomConstraint.isActive = false
         scrollViewBottomConstraint = scrollView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         scrollViewBottomConstraint.isActive = true
