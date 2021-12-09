@@ -244,7 +244,7 @@
                         <outlet property="passwordTextField" destination="LnE-it-hw3" id="Jb8-A1-LY9"/>
                         <outlet property="scrollView" destination="CDG-Yu-Fgc" id="p1b-GT-oqs"/>
                         <outlet property="scrollViewBottomConstraint" destination="0aH-k2-8St" id="GUg-h6-Jpt"/>
-                        <outlet property="scrollViewsView" destination="Kii-3l-Cz0" id="HuJ-VW-8gq"/>
+                        <outlet property="scrollViewContentView" destination="Kii-3l-Cz0" id="HuJ-VW-8gq"/>
                         <outlet property="subInformationLabel" destination="BTC-F6-efn" id="nTs-kf-DsZ"/>
                     </connections>
                 </viewController>

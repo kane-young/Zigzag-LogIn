@@ -18,7 +18,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet weak var identityTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scrollViewsView: UIView!
+    @IBOutlet weak var scrollViewContentView: UIView!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var findButton: UIButton!
     @IBOutlet weak var logInButtonTopConstraint: NSLayoutConstraint!
@@ -258,14 +258,14 @@ final class LogInViewController: UIViewController {
     }
 
     private func setUpAutoLogInTermsButton() {
-        scrollViewsView.addSubview(autoLogInTermsButton)
+        scrollViewContentView.addSubview(autoLogInTermsButton)
         NSLayoutConstraint.activate([
             logInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
             findButton.bottomAnchor.constraint(equalTo: autoLogInTermsButton.topAnchor),
             autoLogInTermsButton.heightAnchor.constraint(equalToConstant: 50),
-            autoLogInTermsButton.leadingAnchor.constraint(equalTo: scrollViewsView.leadingAnchor),
-            autoLogInTermsButton.trailingAnchor.constraint(equalTo: scrollViewsView.trailingAnchor),
-            autoLogInTermsButton.bottomAnchor.constraint(equalTo: scrollViewsView.bottomAnchor)
+            autoLogInTermsButton.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor),
+            autoLogInTermsButton.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor),
+            autoLogInTermsButton.bottomAnchor.constraint(equalTo: scrollViewContentView.bottomAnchor)
         ])
     }
 }
