@@ -7,13 +7,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     private var isLogIn: Bool = false
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     @IBAction func touchRightBarButtonItem(_ sender: UIBarButtonItem) {
         if isLogIn {
@@ -24,7 +20,7 @@ class MainViewController: UIViewController {
     }
 
     private func convertToLogInViewController() {
-        let logInStoryboard = UIStoryboard(name: "LogIn", bundle: nil)
+        let logInStoryboard = UIStoryboard(name: UIStoryboard.Name.logIn, bundle: nil)
         if let logInViewController = logInStoryboard
             .instantiateViewController(withIdentifier: LogInViewController.identifier) as? LogInViewController {
             logInViewController.delegate = self

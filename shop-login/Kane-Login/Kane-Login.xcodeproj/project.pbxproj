@@ -18,6 +18,7 @@
 		C345C05F275A495400F3BCC5 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C345C05E275A495400F3BCC5 /* LogIn.storyboard */; };
 		C3DA4444275E38EF006EF32A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4443275E38EF006EF32A /* LogInViewController.swift */; };
 		C3E719E22761F5D400AEF5B7 /* LogInViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E719E12761F5D400AEF5B7 /* LogInViewControllerDelegate.swift */; };
+		C3EC3D5A2761FBAE006ECF3B /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */; };
 		C3F8E809275F67630032D927 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E808275F67630032D927 /* LogInViewModel.swift */; };
 		C3F8E80B275F727B0032D927 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80A275F727B0032D927 /* Observable.swift */; };
 		C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8E80E275F8D470032D927 /* ValidationType.swift */; };
@@ -41,6 +42,7 @@
 		C345C05E275A495400F3BCC5 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		C3DA4443275E38EF006EF32A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C3E719E12761F5D400AEF5B7 /* LogInViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewControllerDelegate.swift; sourceTree = "<group>"; };
+		C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		C3F8E808275F67630032D927 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		C3F8E80A275F727B0032D927 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C3F8E80E275F8D470032D927 /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		C3E2BBD32759F333005FCBF9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C3EC3D582761FB65006ECF3B /* Extension */,
 				C3F8E80D275F8AD20032D927 /* ViewModel */,
 				C3F8E80C275F8ACB0032D927 /* Model */,
 				C3E2BBD52759F3C7005FCBF9 /* View */,
@@ -147,6 +150,14 @@
 				C31611EE275D0482002D8126 /* LogInTextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C3EC3D582761FB65006ECF3B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C3EC3D592761FBAE006ECF3B /* UIStoryboard+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C3F8E80C275F8ACB0032D927 /* Model */ = {
@@ -290,6 +301,7 @@
 				C3F8E815275F8F790032D927 /* TextState.swift in Sources */,
 				C3F8E813275F8D990032D927 /* LogInValidator.swift in Sources */,
 				C31611EF275D0482002D8126 /* LogInTextField.swift in Sources */,
+				C3EC3D5A2761FBAE006ECF3B /* UIStoryboard+Extension.swift in Sources */,
 				C333F8BD2759DE22009C61C3 /* AppDelegate.swift in Sources */,
 				C3F8E80B275F727B0032D927 /* Observable.swift in Sources */,
 				C3F8E80F275F8D470032D927 /* ValidationType.swift in Sources */,
