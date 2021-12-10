@@ -10,20 +10,20 @@ import UIKit
 final class LogInViewController: UIViewController {
     static let identifier: String = "LogInViewController"
 
-    @IBOutlet weak var informationLabel: UILabel!
-    @IBOutlet weak var subInformationLabel: UILabel!
-    @IBOutlet weak var autoLogInAgreeLabel: UILabel!
-    @IBOutlet weak var autoLogInCheckButton: UIButton!
-    @IBOutlet weak var identityTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scrollViewContentView: UIView!
-    @IBOutlet weak var logInButton: UIButton!
-    @IBOutlet weak var findButton: UIButton!
-    @IBOutlet weak var logInButtonTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var findButtonBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var passwordBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var informationLabel: UILabel!
+    @IBOutlet private weak var subInformationLabel: UILabel!
+    @IBOutlet private weak var autoLogInAgreeLabel: UILabel!
+    @IBOutlet private weak var autoLogInCheckButton: UIButton!
+    @IBOutlet private weak var identityTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var scrollViewContentView: UIView!
+    @IBOutlet private weak var logInButton: UIButton!
+    @IBOutlet private weak var findButton: UIButton!
+    @IBOutlet private weak var logInButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var findButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var passwordBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var scrollViewBottomConstraint: NSLayoutConstraint!
     private lazy var autoLogInTermsButton: UIButton = {
         let autoLogInTermsButton = UIButton()
         autoLogInTermsButton.setTitle(Style.AutoLogInTermsButton.title, for: .normal)
