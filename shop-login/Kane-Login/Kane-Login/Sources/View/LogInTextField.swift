@@ -19,14 +19,17 @@ final class LogInTextField: UITextField {
     }
 
     @IBInspectable
-    var underlineColor: UIColor? {
-        didSet {
-            self.layer.shadowColor = underlineColor?.cgColor
-            self.layer.shadowOffset = CGSize(width: 0, height: 0.3)
-            self.layer.shadowOpacity = 0.5
-            self.layer.shadowRadius = 0.0
-            self.layer.backgroundColor = UIColor.white.cgColor
-        }
+    var underlineColor: UIColor?
+
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        let path = UIBezierPath()
+        path.lineWidth = 0.3
+        path.move(to: CGPoint(x: 0, y: bounds.height - 1))
+        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 1))
+        underlineColor?.set()
+        path.close()
+        path.stroke()
     }
 
     override init(frame: CGRect) {
