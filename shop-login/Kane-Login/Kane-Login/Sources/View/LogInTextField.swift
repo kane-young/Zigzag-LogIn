@@ -56,7 +56,7 @@ final class LogInTextField: UITextField {
     private func updateView() {
         if let image = leftImage {
             self.leftViewMode = .always
-            let size = self.bounds.width / 14
+            let size = bounds.height - 10
             let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size + 10, height: size))
             let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
             iconView.contentMode = .scaleAspectFit
