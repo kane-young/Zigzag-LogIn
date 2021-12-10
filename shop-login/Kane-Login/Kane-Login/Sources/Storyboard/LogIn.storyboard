@@ -274,10 +274,10 @@
     </scenes>
     <designables>
         <designable name="KFQ-y6-xZS">
-            <size key="intrinsicContentSize" width="151" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="147" height="18.666666666666668"/>
         </designable>
         <designable name="LnE-it-hw3">
-            <size key="intrinsicContentSize" width="98.666666666666671" height="17"/>
+            <size key="intrinsicContentSize" width="94.666666666666671" height="17"/>
         </designable>
     </designables>
     <resources>
