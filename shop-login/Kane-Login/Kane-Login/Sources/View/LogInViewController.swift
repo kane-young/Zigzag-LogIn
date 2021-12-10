@@ -33,7 +33,7 @@ final class LogInViewController: UIViewController {
         return autoLogInTermsButton
     }()
 
-    private var ispressed = false
+    private var isAgreed = false
     private var viewModel = LogInViewModel(validator: LogInValidator())
     weak var delegate: LogInViewControllerDelegate?
 
@@ -104,8 +104,8 @@ final class LogInViewController: UIViewController {
     }
 
     private func distinguishAutoLogIn() {
-        ispressed = UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoLogIn)
-        if ispressed {
+        isAgreed = UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoLogIn)
+        if isAgreed {
             deActivateConstraints()
             hideAutoLogInAgreeViews()
             setUpAutoLogInTermsButton()
@@ -113,18 +113,18 @@ final class LogInViewController: UIViewController {
     }
 
     @IBAction func touchAutoLogInButton(sender: UIButton) {
-        if ispressed {
+        if isAgreed {
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedNormal), for: .normal)
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedHighlighted), for: .highlighted)
         } else {
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedNormal), for: .normal)
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedHighlighted), for: .highlighted)
         }
-        ispressed = !ispressed
+        isAgreed = !isAgreed
     }
 
     @IBAction func touchLogInButton(sender: UIButton) {
-        if ispressed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
+        if isAgreed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
             UserDefaults.standard.set(true, forKey: UserDefaults.Key.isAutoLogIn)
             changeViewsForLogIn()
             progressLogIn()
