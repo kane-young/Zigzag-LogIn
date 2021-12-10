@@ -253,9 +253,7 @@ Observer 타입의 인스턴스로써 ViewModel의 프로퍼티들이 `Binding`�
 
 <br>
 
-# Trouble Shooting
-
-## 레이아웃 수정 과정
+# 트러블 슈팅
 
 ## TextField underline
 
