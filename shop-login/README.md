@@ -4,6 +4,14 @@
 
 <br>
 
+## 목차
+- [기능](#기능)
+- [구현](#구현)
+- [트러블 슈팅](#트러블-슈팅)
+
+
+<br>
+
 ## 미리보기
 
 <p float="left">
@@ -16,7 +24,6 @@
 
 # 기능
 
-<br>
 
 ## 자동 로그인 약관 동의
 
@@ -29,7 +36,7 @@
 
 ## 자동 로그인 비동의
 
-<img src="./images/비동의시알람창.gif" width="250" />
+<img src="https://user-images.githubusercontent.com/64566207/145523209-e35e4963-ec60-4d01-8b0f-cd8781124490.gif" width="250" />
 
 자동 로그인 약관에 동의해야하는 것을 사용자가 인식할 수 있도록, Alert창을 띄웠습니다.
 
@@ -133,7 +140,7 @@ final class LogInViewController: UIViewController {
     //...
 
     @IBAction func touchLogInButton(sender: UIButton) {
-        if ispressed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
+        if isAgreed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
             // 자동 로그인에 동의하였으며, ID, PW가 모두 유효할 경우
             UserDefaults.standard.set(true, forKey: UserDefaults.Key.isAutoLogIn)
             changeViewsForLogIn()
@@ -272,7 +279,8 @@ final class LogInTextField: UITextField {
 
 하지만. shadow의 경우 런타임 렌더링 과정에서 복잡하고 자원이 많이 들기 때문에, shadowPath를 설정함으로써 최적화가 필요합니다.
 
-<img src="./images/shadow최적화필요에러.png">
+<img src="https://user-images.githubusercontent.com/64566207/145523204-6c17fc58-8253-44a1-8ed9-c66fd29d1975.png">
+
 
 `shadowPath`에 대해서 학습 하던 중 `CGPath`, `UIBezierPath` 타입에 대해서 인식하게 되어, 해당 타입을 통해서 draw 메소드 내에서 underline이 그려지도록 구현하였습니다.
 
