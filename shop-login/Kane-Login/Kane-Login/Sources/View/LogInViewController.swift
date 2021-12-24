@@ -110,7 +110,7 @@ final class LogInViewController: UIViewController {
         }
     }
 
-    @IBAction func touchAutoLogInButton(sender: UIButton) {
+    @IBAction private func touchAutoLogInButton(sender: UIButton) {
         if viewModel.isAgreed {
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedNormal), for: .normal)
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedHighlighted), for: .highlighted)
@@ -121,7 +121,7 @@ final class LogInViewController: UIViewController {
         viewModel.changeAutoLogInAgreement()
     }
 
-    @IBAction func touchLogInButton(sender: UIButton) {
+    @IBAction private func touchLogInButton(sender: UIButton) {
         if viewModel.isAgreed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
             UserDefaults.standard.set(true, forKey: UserDefaults.Key.isAutoLogIn)
             changeViewsForLogIn()
@@ -161,11 +161,11 @@ final class LogInViewController: UIViewController {
         }
     }
 
-    @IBAction func editIdentityTextField(_ sender: UITextField) {
+    @IBAction private func editIdentityTextField(_ sender: UITextField) {
         viewModel.textChanged(sender.text, type: .identity)
     }
 
-    @IBAction func editPasswordTextField(_ sender: UITextField) {
+    @IBAction private func editPasswordTextField(_ sender: UITextField) {
         viewModel.textChanged(sender.text, type: .password)
     }
 

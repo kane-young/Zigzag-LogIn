@@ -10,7 +10,7 @@ import UIKit
 final class MainViewController: UIViewController {
     private var isLogIn: Bool = false
 
-    @IBAction func touchRightBarButtonItem(_ sender: UIBarButtonItem) {
+    @IBAction private func touchRightBarButtonItem(_ sender: UIBarButtonItem) {
         if isLogIn {
             changeLogInState()
         } else {
