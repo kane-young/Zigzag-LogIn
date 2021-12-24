@@ -10,20 +10,20 @@ import UIKit
 final class LogInViewController: UIViewController {
     static let identifier: String = "LogInViewController"
 
-    @IBOutlet private weak var informationLabel: UILabel!
-    @IBOutlet private weak var subInformationLabel: UILabel!
-    @IBOutlet private weak var autoLogInAgreeLabel: UILabel!
-    @IBOutlet private weak var autoLogInCheckButton: UIButton!
-    @IBOutlet private weak var identityTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var scrollView: UIScrollView!
-    @IBOutlet private weak var scrollViewContentView: UIView!
-    @IBOutlet private weak var logInButton: UIButton!
-    @IBOutlet private weak var findButton: UIButton!
-    @IBOutlet private weak var logInButtonTopConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var findButtonBottomConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var passwordBottomConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var scrollViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var informationLabel: UILabel!
+    @IBOutlet private var subInformationLabel: UILabel!
+    @IBOutlet private var autoLogInAgreeLabel: UILabel!
+    @IBOutlet private var autoLogInCheckButton: UIButton!
+    @IBOutlet private var identityTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var scrollView: UIScrollView!
+    @IBOutlet private var scrollViewContentView: UIView!
+    @IBOutlet private var logInButton: UIButton!
+    @IBOutlet private var findButton: UIButton!
+    @IBOutlet private var logInButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var findButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var passwordBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var scrollViewBottomConstraint: NSLayoutConstraint!
     private lazy var autoLogInTermsButton: UIButton = {
         let autoLogInTermsButton = UIButton()
         autoLogInTermsButton.setTitle(Style.AutoLogInTermsButton.title, for: .normal)
