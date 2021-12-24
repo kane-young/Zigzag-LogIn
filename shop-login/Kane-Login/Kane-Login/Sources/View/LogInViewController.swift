@@ -39,11 +39,11 @@ final class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModelBind()
         configureLabels()
         configureNavigationBar()
         distinguishAutoLogIn()
         addTapGestureRecognizer()
+        viewModelBind()
     }
 
     override func viewWillAppear(_ animated: Bool) {
