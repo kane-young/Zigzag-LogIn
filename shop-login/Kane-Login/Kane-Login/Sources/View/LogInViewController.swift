@@ -33,7 +33,6 @@ final class LogInViewController: UIViewController {
         return autoLogInTermsButton
     }()
 
-    private var isAgreed = false
     private var viewModel = LogInViewModel(validator: LogInValidator())
     weak var delegate: LogInViewControllerDelegate?
 
@@ -104,8 +103,7 @@ final class LogInViewController: UIViewController {
     }
 
     private func distinguishAutoLogIn() {
-        isAgreed = UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoLogIn)
-        if isAgreed {
+        if viewModel.isAgreed {
             deActivateConstraints()
             hideAutoLogInAgreeViews()
             setUpAutoLogInTermsButton()
@@ -113,18 +111,18 @@ final class LogInViewController: UIViewController {
     }
 
     @IBAction func touchAutoLogInButton(sender: UIButton) {
-        if isAgreed {
+        if viewModel.isAgreed {
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedNormal), for: .normal)
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.uncheckedHighlighted), for: .highlighted)
         } else {
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedNormal), for: .normal)
             sender.setImage(UIImage(named: Style.AutoLogInAgreeButton.checkedHighlighted), for: .highlighted)
         }
-        isAgreed = !isAgreed
+        viewModel.changeAutoLogInAgreement()
     }
 
     @IBAction func touchLogInButton(sender: UIButton) {
-        if isAgreed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
+        if viewModel.isAgreed && viewModel.password.value == .valid && viewModel.identity.value == .valid {
             UserDefaults.standard.set(true, forKey: UserDefaults.Key.isAutoLogIn)
             changeViewsForLogIn()
             progressLogIn()
@@ -142,9 +140,9 @@ final class LogInViewController: UIViewController {
     }
 
     private func progressLogIn() {
-        DispatchQueue.global().asyncAfter(deadline: .now() + 5.0) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5.0) { [weak self] in
             DispatchQueue.main.async {
-                self.backToMainViewController()
+                self?.backToMainViewController()
             }
         }
     }

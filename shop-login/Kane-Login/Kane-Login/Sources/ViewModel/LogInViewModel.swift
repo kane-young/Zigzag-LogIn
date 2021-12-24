@@ -12,10 +12,12 @@ final class LogInViewModel {
 
     private(set) var identity: Observable<TextState> = Observable(value: .empty)
     private(set) var password: Observable<TextState> = Observable(value: .empty)
-    private(set) var validatedAll: Observable<Bool> = .init(value: false)
+    private(set) var validatedAll: Observable<Bool> = Observable.init(value: false)
+    private(set) var isAgreed: Bool
 
     init(validator: Validatable) {
         self.validator = validator
+        isAgreed = UserDefaults.standard.bool(forKey: UserDefaults.Key.isAutoLogIn)
     }
 
     func textChanged(_ text: String?, type: ValidationType) {
@@ -26,5 +28,9 @@ final class LogInViewModel {
             password.value = validator.validate(text, type: type)
         }
         validatedAll.value = validator.validatedAll()
+    }
+
+    func changeAutoLogInAgreement() {
+        isAgreed = !isAgreed
     }
 }
