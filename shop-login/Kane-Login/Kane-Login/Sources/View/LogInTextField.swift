@@ -9,7 +9,8 @@ import UIKit
 
 @IBDesignable
 final class LogInTextField: UITextField {
-    @IBInspectable var leftPadding: CGFloat = 0
+    @IBInspectable
+    var leftPadding: CGFloat = 0
 
     @IBInspectable
     var leftImage: UIImage? {
@@ -23,13 +24,15 @@ final class LogInTextField: UITextField {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        let path = UIBezierPath()
-        path.lineWidth = 0.3
-        path.move(to: CGPoint(x: 0, y: bounds.height - 1))
-        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 1))
-        underlineColor?.set()
-        path.close()
-        path.stroke()
+        if let underlineColor = underlineColor {
+            let path = UIBezierPath()
+            path.lineWidth = 0.3
+            path.move(to: CGPoint(x: 0, y: bounds.height - 1))
+            path.addLine(to: CGPoint(x: bounds.width, y: bounds.height - 1))
+            underlineColor.set()
+            path.close()
+            path.stroke()
+        }
     }
 
     override init(frame: CGRect) {
